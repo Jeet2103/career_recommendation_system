@@ -1,0 +1,28 @@
+2025-06-15 23:02:55 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-15 23:03:28 [INFO] [main_flow.py] Pipeline started with user input: i can do very good batting 
+2025-06-15 23:03:28 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-15 23:03:28 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-15 23:03:28 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-15 23:03:28 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-15 23:03:28 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-15 23:03:29 [INFO] [main_flow.py] Raw response from preference extraction: content='batting, cricket, sports' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 6, 'prompt_tokens': 293, 'total_tokens': 299, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-f72d3a3c-41f4-4565-89f6-bbcdda1b3b8d-0' usage_metadata={'input_tokens': 293, 'output_tokens': 6, 'total_tokens': 299}
+2025-06-15 23:03:29 [INFO] [main_flow.py] Extracted interests: ['batting', 'cricket', 'sports']
+2025-06-15 23:03:29 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['batting', 'cricket', 'sports']
+2025-06-15 23:03:29 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-15 23:03:29 [INFO] [map_to_career.py] Received user interests: ['batting', 'cricket', 'sports']
+2025-06-15 23:03:29 [INFO] [map_to_career.py] Formatting career field mapping from base dictionary...
+2025-06-15 23:03:29 [INFO] [map_to_career.py] Mapping formatted successfully.
+2025-06-15 23:03:29 [INFO] [map_to_career.py] ChatOpenAI model initialized.
+2025-06-15 23:03:29 [INFO] [map_to_career.py] Prompt chained with LLM.
+2025-06-15 23:03:30 [INFO] [map_to_career.py] LLM response received: Career Fields: ["Athletics"]
+2025-06-15 23:03:30 [INFO] [map_to_career.py] Extracted structured career fields: ['Athletics']
+2025-06-15 23:03:30 [INFO] [main_flow.py] Mapped career fields: ['Athletics']
+2025-06-15 23:03:30 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-15 23:03:30 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-15 23:03:31 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-15 23:03:31 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-15 23:03:31 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-15 23:03:31 [INFO] [main_flow.py] Generating explanation for: {'interest': 'batting, cricket, sports', 'career': 'Athletics'}
+2025-06-15 23:03:33 [INFO] [main_flow.py] Generated explanation: A career in athletics is a suitable path for someone interested in batting and cricket because it enhances essential skills such as speed, agility, and hand-eye coordination, which are crucial for excelling in these sports. Additionally, the competitive nature of athletics fosters a strong work ethic and discipline, both of which are vital for success in cricket and other sports.
+2025-06-15 23:03:33 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-15 23:03:33 [INFO] [main_flow.py] CLI execution completed successfully.

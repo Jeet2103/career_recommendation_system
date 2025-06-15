@@ -1,0 +1,33 @@
+2025-06-15 22:37:23 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-15 22:38:00 [INFO] [main_flow.py] Pipeline started with user input: i love to make idol usng soil
+2025-06-15 22:38:00 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-15 22:38:00 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-15 22:38:01 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-15 22:38:01 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-15 22:38:01 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-15 22:38:02 [INFO] [main_flow.py] Raw response from preference extraction: content='Interests: sculpture, pottery, art' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 8, 'prompt_tokens': 295, 'total_tokens': 303, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-26262efe-2cf2-4cbf-bde8-3e36a6b604d6-0' usage_metadata={'input_tokens': 295, 'output_tokens': 8, 'total_tokens': 303}
+2025-06-15 22:38:02 [INFO] [main_flow.py] Extracted interests: ['Interests: sculpture', 'pottery', 'art']
+2025-06-15 22:38:02 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['Interests: sculpture', 'pottery', 'art']
+2025-06-15 22:38:02 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-15 22:38:02 [INFO] [map_to_career.py] Received user interests: ['Interests: sculpture', 'pottery', 'art']
+2025-06-15 22:38:02 [INFO] [map_to_career.py] Formatting career field mapping from base dictionary...
+2025-06-15 22:38:02 [INFO] [map_to_career.py] Mapping formatted successfully.
+2025-06-15 22:38:02 [INFO] [map_to_career.py] ChatOpenAI model initialized.
+2025-06-15 22:38:02 [INFO] [map_to_career.py] Prompt chained with LLM.
+2025-06-15 22:38:03 [INFO] [map_to_career.py] LLM response received: User Interests: ['sculpture', 'pottery', 'art']  
+Career Fields: ['Fine Arts']
+2025-06-15 22:38:03 [INFO] [map_to_career.py] Extracted structured career fields: ['sculpture', 'pottery', 'art']
+2025-06-15 22:38:03 [INFO] [main_flow.py] Mapped career fields: ['sculpture', 'pottery', 'art']
+2025-06-15 22:38:03 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-15 22:38:03 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-15 22:38:04 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-15 22:38:04 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-15 22:38:04 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-15 22:38:04 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests: sculpture, pottery, art', 'career': 'sculpture'}
+2025-06-15 22:38:06 [INFO] [main_flow.py] Generated explanation: A career in sculpture is a perfect fit for someone passionate about sculpture, pottery, and art, as it allows for the exploration of three-dimensional forms and materials. This path enables the individual to express their creativity through tactile mediums, combining artistic vision with craftsmanship to create unique, tangible works that resonate with viewers.
+2025-06-15 22:38:06 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests: sculpture, pottery, art', 'career': 'pottery'}
+2025-06-15 22:38:08 [INFO] [main_flow.py] Generated explanation: A career in pottery is a natural fit for someone passionate about sculpture and art, as it combines the tactile experience of shaping clay with the creative expression found in visual art. Pottery allows for the exploration of form, texture, and color, enabling artists to create both functional and decorative pieces that reflect their artistic vision.
+2025-06-15 22:38:08 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests: sculpture, pottery, art', 'career': 'art'}
+2025-06-15 22:38:09 [INFO] [main_flow.py] Generated explanation: A career in art, particularly in sculpture and pottery, allows individuals to express their creativity and bring their artistic visions to life through tactile mediums. This path offers opportunities for personal fulfillment and the chance to impact others through unique, handcrafted pieces that resonate emotionally and culturally.
+2025-06-15 22:38:09 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-15 22:38:09 [INFO] [main_flow.py] CLI execution completed successfully.
