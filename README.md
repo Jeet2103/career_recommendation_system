@@ -1,5 +1,5 @@
 """
-# Brainwonders Assignment - Career Recommendation via LLMs
+# Career Recommendation via LLMs
 
 ## Objective:
 This project leverages Large Language Models (LLMs) to analyze a user’s interests and recommend relevant career paths with intelligent, personalized explanations. It combines prompt engineering, fuzzy semantic matching, and fallback clarification to handle ambiguity and guide users towards fulfilling career decisions through AI-driven insights.
@@ -100,7 +100,9 @@ python main_flow.py
 
 ```
 You'll be prompted to enter your interests like:
-```Describe your interests: I love sketching, playing cricket and solving math puzzles.
+```
+Describe your interests: I love sketching, playing cricket and solving math puzzles.
+
 ```
 
 - The system will:
@@ -113,4 +115,7 @@ You'll be prompted to enter your interests like:
 
     - Provide individual explanations per career.
 
-"""
+Maintained by **Jeet Nandigrami**  
+- GitHub: [Jeet2103](https://github.com/Jeet2103)  
+- LinkedIn: [Jeet Nandigrami](https://www.linkedin.com/in/jeet-nandigrami/)
+- Resume : [RESUME](https://drive.google.com/file/d/1Zvm0yAK--t_K-lNBpLnDFA2Lz41ZBqvX/view?usp=sharing)
