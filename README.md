@@ -15,6 +15,7 @@ brainwonders_assignment/
 ├── main_flow.py               # Complete integrated pipeline
 ├── requirements.txt           # List OpenAI, LangChain, FAISS, etc.
 
+
 ```
 
 ## Tech Stack:
