@@ -1,2 +1,8 @@
 langchain_community
 langchain_core
+streamlit
+openai
+langchain
+nltk
+faiss-cpu
+python-dotenv

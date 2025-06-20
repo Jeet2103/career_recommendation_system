@@ -5,12 +5,13 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from dotenv import load_dotenv
 import os
+import streamlit as st
 
 # Import your custom logger
 from logger_config.logger import get_logger
 
 # Initialize environment variables
-load_dotenv()
+# load_dotenv()
 
 # Initialize logger
 logger = get_logger(__name__)
@@ -66,7 +67,7 @@ def get_preferences_chain():
         llm = ChatOpenAI(
             model_name="gpt-4o-mini", 
             temperature=0.4, 
-            openai_api_key=os.getenv("OPENAI_API_KEY")
+            openai_api_key = st.secrets("OPENAI_API_KEY")
         )
         logger.info("LLM initialized with gpt-4o-mini.")
 
