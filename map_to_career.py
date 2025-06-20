@@ -61,7 +61,8 @@ base_mapping = {
     "history": "Archaeology",
     "past": "Archaeology",
     "animals": "Veterinary Science",
-    "pets": "Veterinary Science"
+    "pets": "Veterinary Science",
+    "cooking" : "Chef"
 }
 
 def get_embedding(text: str) -> np.ndarray:
