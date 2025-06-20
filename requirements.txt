@@ -6,3 +6,4 @@ langchain
 nltk
 faiss-cpu
 python-dotenv
+langchain_openai
