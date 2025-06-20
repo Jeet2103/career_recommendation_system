@@ -39,7 +39,7 @@ def get_fallback_chain():
             model_name="gpt-4o-mini",
             temperature=0.5,
             # openai_api_key=os.getenv("OPENAI_API_KEY")
-            openai_api_key = st.secrets("OPENAI_API_KEY")
+            openai_api_key = st.secrets["OPENAI_API_KEY"]
         )
         logger.info("ChatOpenAI LLM initialized for fallback chain.")
 
