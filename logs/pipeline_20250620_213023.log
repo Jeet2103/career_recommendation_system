@@ -1,0 +1,24 @@
+2025-06-20 21:30:24 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-20 21:30:43 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:30:43 [INFO] [map_to_career.py] Mapping user interests: ['sketching', 'math', 'helping', 'Drawing']
+2025-06-20 21:30:44 [INFO] [map_to_career.py] Interest 'sketching' lemmatized to 'sketching'
+2025-06-20 21:30:44 [INFO] [map_to_career.py] Best FAISS match for 'sketching': sketching -> Fine Arts
+2025-06-20 21:30:46 [WARNING] [map_to_career.py] GPT response was not a valid list: ```python
+synonyms = ["drawing", "drafting", "illustrating", "doodling", "rendering"]
+```
+2025-06-20 21:30:46 [INFO] [map_to_career.py] Interest 'math' lemmatized to 'math'
+2025-06-20 21:30:46 [INFO] [map_to_career.py] Best FAISS match for 'math': math -> Data Science
+2025-06-20 21:30:47 [WARNING] [map_to_career.py] GPT response was not a valid list: ```python
+math_terms = ["mathematics", "calculus", "algebra", "geometry", "arithmetic"]
+```
+2025-06-20 21:30:47 [INFO] [map_to_career.py] Interest 'helping' lemmatized to 'helping'
+2025-06-20 21:30:48 [INFO] [map_to_career.py] Best FAISS match for 'helping': helping -> Social Work
+2025-06-20 21:30:49 [WARNING] [map_to_career.py] GPT response was not a valid list: ```python
+synonyms = ["assisting", "aiding", "supporting", "facilitating", "contributing"]
+```
+2025-06-20 21:30:49 [INFO] [map_to_career.py] Interest 'Drawing' lemmatized to 'drawing'
+2025-06-20 21:30:50 [INFO] [map_to_career.py] Best FAISS match for 'drawing': drawing -> Graphic Design
+2025-06-20 21:30:51 [WARNING] [map_to_career.py] GPT response was not a valid list: ```python
+synonyms = ["sketch", "illustration", "depiction", "rendering", "draft"]
+```
+2025-06-20 21:30:51 [INFO] [map_to_career.py] Final mapped careers: ['Social Work', 'Data Science', 'Graphic Design', 'Fine Arts']

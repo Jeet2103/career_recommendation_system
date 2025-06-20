@@ -1,20 +1,24 @@
-import os
 from typing import List, Dict
+import os
+import faiss
+import numpy as np
+import nltk
+from nltk.stem import WordNetLemmatizer
+from openai import OpenAI as OpenAIClient
 from dotenv import load_dotenv
-from langchain_core.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI
-from langchain_core.runnables import RunnableLambda
-
-# Import your custom logger
 from logger_config.logger import get_logger
+import ast  # for safe parsing of GPT responses
 
-# Load environment variables
+# Load environment variables and NLTK resources
 load_dotenv()
+nltk.download('wordnet')
 
-# Initialize the logger
+# Initialize components
 logger = get_logger(__name__)
+lemmatizer = WordNetLemmatizer()
+openai_client = OpenAIClient(api_key=os.getenv("OPENAI_API_KEY"))
 
-# Base interest-to-career mapping dictionary
+# Define base interest-to-career mapping
 base_mapping = {
     "coding": "Software Engineering",
     "programming": "Software Engineering",
@@ -46,6 +50,7 @@ base_mapping = {
     "engineering": "Mechanical Engineering",
     "teaching": "Education",
     "mentoring": "Education",
+    "Dancing": "Dancer",
     "music": "Music Production",
     "singing": "Music Production",
     "photography": "Photography",
@@ -58,125 +63,99 @@ base_mapping = {
     "pets": "Veterinary Science"
 }
 
-
-def format_mapping(mapping: Dict[str, str]) -> str:
-    """
-    Reverses the mapping from interest-to-career to career-to-interests for prompt formatting.
-    """
-    logger.info("Formatting career field mapping from base dictionary...")
-    reverse = {}
+def get_embedding(text: str) -> np.ndarray:
+    """Get text embedding using OpenAI."""
     try:
-        for k, v in mapping.items():
-            reverse.setdefault(v, []).append(k)
-        formatted = "\n".join(f"- {v}: {', '.join(list(set(ks)))}" for v, ks in reverse.items())
-        logger.info("Mapping formatted successfully.")
-        return formatted
+        response = openai_client.embeddings.create(
+            model="text-embedding-3-small",
+            input=[text]
+        )
+        return np.array(response.data[0].embedding, dtype=np.float32)
     except Exception as e:
-        logger.error(f"Error formatting mapping: {e}")
+        logger.error(f"Embedding generation failed for '{text}': {e}")
+        return np.zeros(1536, dtype=np.float32)
+
+def prepare_faiss_index(mapping: Dict[str, str]):
+    """Build FAISS index from base mapping."""
+    try:
+        logger.info("Preparing FAISS index...")
+        keys = list(mapping.keys())
+        embeddings = [get_embedding(k) for k in keys]
+        dimension = len(embeddings[0])
+        index = faiss.IndexFlatL2(dimension)
+        index.add(np.array(embeddings))
+        logger.info("FAISS index built successfully.")
+        return index, keys
+    except Exception as e:
+        logger.error(f"Failed to prepare FAISS index: {e}")
         raise
 
+def expand_synonyms_with_gpt(keyword: str) -> List[str]:
+    prompt = f"List 5 synonyms or related words for '{keyword}' in Python list format. Only return the list."
 
-# Define the prompt template used by the LLM
-prompt_template = PromptTemplate.from_template("""
-You are a career mapping assistant.
-
-Given a list of interests, map each to one or more career fields using the predefined mappings below.
-
-Rules:
-- Resolve synonyms (e.g., "sketching" → "drawing" → "Fine Arts")
-- Use the closest career field from the list.
-- Avoid duplicates.
-- If unsure, use "Uncertain".
-
-Career Field Mapping:
-{career_mapping}
-
-Examples:
-User Interests: ["drawing", "painting", "coding"]
-Career Fields: ["Graphic Design", "Fine Arts", "Software Engineering"]
-
-User Interests: ["volunteering", "helping", "teamwork"]
-Career Fields: ["Social Work", "Human Resources"]
-
-User Interests: ["robots", "math", "programming"]
-Career Fields: ["Robotics Engineering", "Data Science", "Software Engineering"]
-
-Now map the following:
-User Interests: {user_interests}
-Career Fields:
-""")
-
-
-def map_interests_with_llm(interests: List[str]) -> List[str]:
-    """
-    Uses an LLM to map user interests to career fields based on predefined mappings.
-    """
-    logger.info(f"Received user interests: {interests}")
     try:
-        formatted_map = format_mapping(base_mapping)
-
-        # Initialize the LLM with chosen model
-        llm = ChatOpenAI(
-            model="gpt-4o",
-            temperature=0.2,
-            openai_api_key=os.getenv("OPENAI_API_KEY")
+        logger.info(f"Requesting synonyms from GPT for: {keyword}")
+        completion = openai_client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3
         )
-        logger.info("ChatOpenAI model initialized.")
+        raw = completion.choices[0].message.content.strip()
 
-        # Chain the prompt with the LLM
-        chain = prompt_template | llm
-        logger.info("Prompt chained with LLM.")
+        # Clean the response
+        if raw.startswith("```"):
+            raw = raw.strip("`")  # remove ```python or ``` blocks
+        if "=" in raw:
+            raw = raw.split("=", 1)[-1].strip()  # get only the right-hand side list
+        if raw.startswith("[") and raw.endswith("]"):
+            synonyms = ast.literal_eval(raw)
+            if isinstance(synonyms, list):
+                return [str(s).strip() for s in synonyms]
 
-        # Generate response
-        response = chain.invoke({"career_mapping": formatted_map, "user_interests": interests})
-        logger.info(f"LLM response received: {response.content.strip()}")
+        logger.warning(f"GPT response was not a valid list: {raw}")
+        return []
 
-        # Try to extract from structured list format
-        text = response.content.strip()
-        if "[" in text and "]" in text:
-            try:
-                extracted = eval(text[text.index("["):text.index("]")+1])
-                result = [item.strip(' "\'') for item in extracted]
-                logger.info(f"Extracted structured career fields: {result}")
-                return result
-            except Exception as e:
-                logger.warning(f"Fallback to manual parsing due to eval error: {e}")
+    except Exception as e:
+        logger.warning(f"Failed to fetch synonyms for '{keyword}': {e}")
+        return []
 
-        # Fallback: manually extract lines if structured format fails
-        fields = []
-        for line in text.splitlines():
-            if ":" not in line and line.strip():  # Skip mappings or empty lines
-                fields.extend([field.strip(' "\'') for field in line.split(",") if field.strip()])
 
-        result = fields if fields else ["Uncertain"]
-        logger.info(f"Final mapped career fields (fallback): {result}")
+def map_interest_to_career(interests: List[str]) -> List[str]:
+    """Map user interests to career fields using FAISS and optional synonym expansion."""
+    try:
+        logger.info(f"Mapping user interests: {interests}")
+        matched = set()
+
+        for interest in interests:
+            lemmatized = lemmatizer.lemmatize(interest.lower())
+            logger.info(f"Interest '{interest}' lemmatized to '{lemmatized}'")
+
+            emb = get_embedding(lemmatized)
+            D, I = faiss_index.search(np.array([emb]), k=1)
+            closest_keyword = faiss_keys[I[0][0]]
+            logger.info(f"Best FAISS match for '{lemmatized}': {closest_keyword} -> {base_mapping[closest_keyword]}")
+            matched.add(base_mapping[closest_keyword])
+
+            for synonym in expand_synonyms_with_gpt(lemmatized):
+                syn_lem = lemmatizer.lemmatize(synonym.lower())
+                if syn_lem in base_mapping:
+                    logger.info(f"Synonym '{syn_lem}' matched to {base_mapping[syn_lem]}")
+                    matched.add(base_mapping[syn_lem])
+
+        result = list(matched) if matched else ["Uncertain"]
+        logger.info(f"Final mapped careers: {result}")
         return result
 
     except Exception as e:
-        logger.error(f"Error during LLM mapping: {e}")
+        logger.error(f"Error during interest mapping: {e}")
         return ["Uncertain"]
 
+# Build FAISS index once at startup
+faiss_index, faiss_keys = prepare_faiss_index(base_mapping)
 
+# Optional testing block
 if __name__ == "__main__":
-    try:
-        logger.info("Running test cases for career mapping...")
-
-        # Example user interest test cases
-        test_cases = [
-            ["drawing", "painting", "coding"],
-            ["volunteering", "helping", "teamwork"],
-            ["robots", "math", "programming"],
-            ["fashion", "style", "photography"],
-            ["unknown", "skydiving"]
-        ]
-
-        for i, interests in enumerate(test_cases):
-            print(f"\nTest Case {i+1}")
-            print("User Interests:", interests)
-            logger.info(f"Test Case {i+1}: {interests}")
-            careers = map_interests_with_llm(interests)
-            print("Mapped Careers:", careers)
-            logger.info(f"Mapped Careers: {careers}")
-
-    except Exception as e:
-        logger.error(f"Fatal error in main block: {e}")
+    sample_input = ["sketching", "math", "helping", "Drawing"]
+    print("User Interests:", sample_input)
+    careers = map_interest_to_career(sample_input)
+    print("Mapped Careers:", careers)

@@ -1,0 +1,37 @@
+2025-06-20 21:50:44 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-20 21:51:06 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:52:01 [INFO] [map_to_career.py] Mapping user interests: ['dance', 'coding']
+2025-06-20 21:52:03 [INFO] [map_to_career.py] Interest 'dance' lemmatized to 'dance'
+2025-06-20 21:52:04 [INFO] [map_to_career.py] Best FAISS match for 'dance': Dancing -> Dancer
+2025-06-20 21:52:04 [INFO] [map_to_career.py] Requesting synonyms from GPT for: dance
+2025-06-20 21:52:05 [INFO] [map_to_career.py] Interest 'coding' lemmatized to 'coding'
+2025-06-20 21:52:05 [INFO] [map_to_career.py] Best FAISS match for 'coding': coding -> Software Engineering
+2025-06-20 21:52:06 [INFO] [map_to_career.py] Requesting synonyms from GPT for: coding
+2025-06-20 21:52:07 [INFO] [map_to_career.py] Synonym 'programming' matched to Software Engineering
+2025-06-20 21:52:07 [INFO] [map_to_career.py] Final mapped careers: ['Software Engineering', 'Dancer']
+2025-06-20 21:54:52 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-20 21:55:19 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:55:52 [INFO] [map_to_career.py] Mapping user interests: ['drawing', 'storytelling', 'animals']
+2025-06-20 21:55:52 [INFO] [map_to_career.py] Interest 'drawing' lemmatized to 'drawing'
+2025-06-20 21:55:53 [INFO] [map_to_career.py] Best FAISS match for 'drawing': drawing -> Graphic Design
+2025-06-20 21:55:53 [INFO] [map_to_career.py] Requesting synonyms from GPT for: drawing
+2025-06-20 21:55:54 [INFO] [map_to_career.py] Interest 'storytelling' lemmatized to 'storytelling'
+2025-06-20 21:55:55 [INFO] [map_to_career.py] Best FAISS match for 'storytelling': storytelling -> Screenwriting
+2025-06-20 21:55:55 [INFO] [map_to_career.py] Requesting synonyms from GPT for: storytelling
+2025-06-20 21:55:57 [INFO] [map_to_career.py] Interest 'animals' lemmatized to 'animal'
+2025-06-20 21:55:58 [INFO] [map_to_career.py] Best FAISS match for 'animal': animals -> Veterinary Science
+2025-06-20 21:55:58 [INFO] [map_to_career.py] Requesting synonyms from GPT for: animal
+2025-06-20 21:55:59 [INFO] [map_to_career.py] Final mapped careers: ['Screenwriting', 'Graphic Design', 'Veterinary Science']
+2025-06-20 21:59:09 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-20 21:59:35 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:59:49 [INFO] [map_to_career.py] Mapping user interests: ['drawing', 'storytelling', 'animals']
+2025-06-20 21:59:49 [INFO] [map_to_career.py] Interest 'drawing' lemmatized to 'drawing'
+2025-06-20 21:59:50 [INFO] [map_to_career.py] Best FAISS match for 'drawing': drawing -> Graphic Design
+2025-06-20 21:59:50 [INFO] [map_to_career.py] Requesting synonyms from GPT for: drawing
+2025-06-20 21:59:51 [INFO] [map_to_career.py] Interest 'storytelling' lemmatized to 'storytelling'
+2025-06-20 21:59:51 [INFO] [map_to_career.py] Best FAISS match for 'storytelling': storytelling -> Screenwriting
+2025-06-20 21:59:51 [INFO] [map_to_career.py] Requesting synonyms from GPT for: storytelling
+2025-06-20 21:59:52 [INFO] [map_to_career.py] Interest 'animals' lemmatized to 'animal'
+2025-06-20 21:59:53 [INFO] [map_to_career.py] Best FAISS match for 'animal': animals -> Veterinary Science
+2025-06-20 21:59:53 [INFO] [map_to_career.py] Requesting synonyms from GPT for: animal
+2025-06-20 21:59:54 [INFO] [map_to_career.py] Final mapped careers: ['Screenwriting', 'Graphic Design', 'Veterinary Science']

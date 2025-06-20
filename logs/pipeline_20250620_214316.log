@@ -1,0 +1,19 @@
+2025-06-20 21:43:16 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-20 21:43:18 [INFO] [main_flow.py] Pipeline started with user input: i love to dance and always want to learn guitter 
+2025-06-20 21:43:18 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 21:43:19 [INFO] [main_flow.py] Raw response from preference extraction: content='dance, guitar' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 3, 'prompt_tokens': 298, 'total_tokens': 301, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-aae05d8c-cad2-4433-abc9-de7fd0568d37-0' usage_metadata={'input_tokens': 298, 'output_tokens': 3, 'total_tokens': 301}
+2025-06-20 21:43:19 [INFO] [main_flow.py] Extracted interests: ['dance', 'guitar']
+2025-06-20 21:43:19 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['dance', 'guitar']
+2025-06-20 21:43:19 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-20 21:43:23 [INFO] [main_flow.py] Mapped career fields: ['Music Production', 'Dancer']
+2025-06-20 21:43:23 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-20 21:43:23 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-20 21:43:24 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-20 21:43:24 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-20 21:43:24 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-20 21:43:24 [INFO] [main_flow.py] Generating explanation for: {'interest': 'dance, guitar', 'career': 'Music Production'}
+2025-06-20 21:43:30 [INFO] [main_flow.py] Generated explanation: A career in music production is ideal for someone interested in dance and guitar because it allows for the creative fusion of rhythmic elements and melodies that enhance dance performances. Additionally, understanding guitar can help in crafting unique soundscapes and compositions, making the music more engaging for dancers and audiences alike.
+2025-06-20 21:43:30 [INFO] [main_flow.py] Generating explanation for: {'interest': 'dance, guitar', 'career': 'Dancer'}
+2025-06-20 21:43:31 [INFO] [main_flow.py] Generated explanation: A career as a dancer is a suitable path for someone interested in dance because it allows for creative expression through movement and performance. Additionally, incorporating guitar into dance routines can enhance the artistic quality of performances, providing a unique fusion of music and choreography that can captivate audiences.
+2025-06-20 21:43:31 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-20 21:43:31 [INFO] [main_flow.py] CLI execution completed successfully.

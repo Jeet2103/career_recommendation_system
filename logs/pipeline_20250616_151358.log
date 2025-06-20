@@ -1,0 +1,28 @@
+2025-06-16 15:13:58 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-16 15:14:03 [INFO] [main_flow.py] Pipeline started with user input: i love coding
+2025-06-16 15:14:03 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-16 15:14:03 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-16 15:14:04 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-16 15:14:04 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-16 15:14:04 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-16 15:14:06 [INFO] [main_flow.py] Raw response from preference extraction: content='coding' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 290, 'total_tokens': 291, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-27eef014-cb76-4e37-b8fa-47fd2f8d9088-0' usage_metadata={'input_tokens': 290, 'output_tokens': 1, 'total_tokens': 291}
+2025-06-16 15:14:06 [INFO] [main_flow.py] Extracted interests: ['coding']
+2025-06-16 15:14:06 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['coding']
+2025-06-16 15:14:06 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-16 15:14:06 [INFO] [map_to_career.py] Received user interests: ['coding']
+2025-06-16 15:14:06 [INFO] [map_to_career.py] Formatting career field mapping from base dictionary...
+2025-06-16 15:14:06 [INFO] [map_to_career.py] Mapping formatted successfully.
+2025-06-16 15:14:06 [INFO] [map_to_career.py] ChatOpenAI model initialized.
+2025-06-16 15:14:06 [INFO] [map_to_career.py] Prompt chained with LLM.
+2025-06-16 15:14:08 [INFO] [map_to_career.py] LLM response received: Career Fields: ["Software Engineering"]
+2025-06-16 15:14:08 [INFO] [map_to_career.py] Extracted structured career fields: ['Software Engineering']
+2025-06-16 15:14:08 [INFO] [main_flow.py] Mapped career fields: ['Software Engineering']
+2025-06-16 15:14:08 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-16 15:14:08 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-16 15:14:08 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-16 15:14:08 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-16 15:14:08 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-16 15:14:08 [INFO] [main_flow.py] Generating explanation for: {'interest': 'coding', 'career': 'Software Engineering'}
+2025-06-16 15:14:10 [INFO] [main_flow.py] Generated explanation: A career in Software Engineering is ideal for someone interested in coding because it allows you to apply your programming skills to solve real-world problems and create innovative software solutions. The field offers diverse opportunities, from developing applications to working on complex systems, ensuring continuous learning and growth in technology.
+2025-06-16 15:14:10 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-16 15:14:10 [INFO] [main_flow.py] CLI execution completed successfully.

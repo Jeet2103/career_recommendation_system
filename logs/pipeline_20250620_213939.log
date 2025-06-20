@@ -1,0 +1,10 @@
+2025-06-20 21:39:39 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-20 21:39:59 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:40:51 [INFO] [map_to_career.py] Mapping user interests: ['dance', 'guitar']
+2025-06-20 21:40:52 [INFO] [map_to_career.py] Interest 'dance' lemmatized to 'dance'
+2025-06-20 21:40:53 [INFO] [map_to_career.py] Best FAISS match for 'dance': animation -> Animation & VFX
+2025-06-20 21:40:53 [INFO] [map_to_career.py] Requesting synonyms from GPT for: dance
+2025-06-20 21:40:54 [INFO] [map_to_career.py] Interest 'guitar' lemmatized to 'guitar'
+2025-06-20 21:40:55 [INFO] [map_to_career.py] Best FAISS match for 'guitar': music -> Music Production
+2025-06-20 21:40:55 [INFO] [map_to_career.py] Requesting synonyms from GPT for: guitar
+2025-06-20 21:40:56 [INFO] [map_to_career.py] Final mapped careers: ['Music Production', 'Animation & VFX']

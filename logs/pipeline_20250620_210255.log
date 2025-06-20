@@ -1,0 +1,102 @@
+2025-06-20 21:02:55 [INFO] [map_to_career.py] Preparing FAISS index from base mapping...
+2025-06-20 21:02:55 [INFO] [map_to_career.py] Generating embedding for: coding
+2025-06-20 21:02:57 [INFO] [map_to_career.py] Embedding generated for: coding
+2025-06-20 21:02:57 [INFO] [map_to_career.py] Generating embedding for: programming
+2025-06-20 21:02:58 [INFO] [map_to_career.py] Embedding generated for: programming
+2025-06-20 21:02:58 [INFO] [map_to_career.py] Generating embedding for: robots
+2025-06-20 21:02:59 [INFO] [map_to_career.py] Embedding generated for: robots
+2025-06-20 21:02:59 [INFO] [map_to_career.py] Generating embedding for: robotics
+2025-06-20 21:03:00 [INFO] [map_to_career.py] Embedding generated for: robotics
+2025-06-20 21:03:00 [INFO] [map_to_career.py] Generating embedding for: math
+2025-06-20 21:03:00 [INFO] [map_to_career.py] Embedding generated for: math
+2025-06-20 21:03:00 [INFO] [map_to_career.py] Generating embedding for: statistics
+2025-06-20 21:03:01 [INFO] [map_to_career.py] Embedding generated for: statistics
+2025-06-20 21:03:01 [INFO] [map_to_career.py] Generating embedding for: drawing
+2025-06-20 21:03:02 [INFO] [map_to_career.py] Embedding generated for: drawing
+2025-06-20 21:03:02 [INFO] [map_to_career.py] Generating embedding for: painting
+2025-06-20 21:03:04 [INFO] [map_to_career.py] Embedding generated for: painting
+2025-06-20 21:03:04 [INFO] [map_to_career.py] Generating embedding for: sketching
+2025-06-20 21:03:04 [INFO] [map_to_career.py] Embedding generated for: sketching
+2025-06-20 21:03:04 [INFO] [map_to_career.py] Generating embedding for: art
+2025-06-20 21:03:05 [INFO] [map_to_career.py] Embedding generated for: art
+2025-06-20 21:03:05 [INFO] [map_to_career.py] Generating embedding for: animations
+2025-06-20 21:03:06 [INFO] [map_to_career.py] Embedding generated for: animations
+2025-06-20 21:03:06 [INFO] [map_to_career.py] Generating embedding for: animation
+2025-06-20 21:03:07 [INFO] [map_to_career.py] Embedding generated for: animation
+2025-06-20 21:03:07 [INFO] [map_to_career.py] Generating embedding for: cartoons
+2025-06-20 21:03:08 [INFO] [map_to_career.py] Embedding generated for: cartoons
+2025-06-20 21:03:08 [INFO] [map_to_career.py] Generating embedding for: sports
+2025-06-20 21:03:09 [INFO] [map_to_career.py] Embedding generated for: sports
+2025-06-20 21:03:09 [INFO] [map_to_career.py] Generating embedding for: fitness
+2025-06-20 21:03:10 [INFO] [map_to_career.py] Embedding generated for: fitness
+2025-06-20 21:03:10 [INFO] [map_to_career.py] Generating embedding for: teamwork
+2025-06-20 21:03:11 [INFO] [map_to_career.py] Embedding generated for: teamwork
+2025-06-20 21:03:11 [INFO] [map_to_career.py] Generating embedding for: communication
+2025-06-20 21:03:11 [INFO] [map_to_career.py] Embedding generated for: communication
+2025-06-20 21:03:11 [INFO] [map_to_career.py] Generating embedding for: helping
+2025-06-20 21:03:12 [INFO] [map_to_career.py] Embedding generated for: helping
+2025-06-20 21:03:12 [INFO] [map_to_career.py] Generating embedding for: volunteering
+2025-06-20 21:03:12 [INFO] [map_to_career.py] Embedding generated for: volunteering
+2025-06-20 21:03:12 [INFO] [map_to_career.py] Generating embedding for: writing
+2025-06-20 21:03:13 [INFO] [map_to_career.py] Embedding generated for: writing
+2025-06-20 21:03:13 [INFO] [map_to_career.py] Generating embedding for: storytelling
+2025-06-20 21:03:14 [INFO] [map_to_career.py] Embedding generated for: storytelling
+2025-06-20 21:03:14 [INFO] [map_to_career.py] Generating embedding for: creative writing
+2025-06-20 21:03:16 [INFO] [map_to_career.py] Embedding generated for: creative writing
+2025-06-20 21:03:16 [INFO] [map_to_career.py] Generating embedding for: business
+2025-06-20 21:03:16 [INFO] [map_to_career.py] Embedding generated for: business
+2025-06-20 21:03:16 [INFO] [map_to_career.py] Generating embedding for: entrepreneur
+2025-06-20 21:03:17 [INFO] [map_to_career.py] Embedding generated for: entrepreneur
+2025-06-20 21:03:17 [INFO] [map_to_career.py] Generating embedding for: nature
+2025-06-20 21:03:18 [INFO] [map_to_career.py] Embedding generated for: nature
+2025-06-20 21:03:18 [INFO] [map_to_career.py] Generating embedding for: environment
+2025-06-20 21:03:18 [INFO] [map_to_career.py] Embedding generated for: environment
+2025-06-20 21:03:18 [INFO] [map_to_career.py] Generating embedding for: machines
+2025-06-20 21:03:19 [INFO] [map_to_career.py] Embedding generated for: machines
+2025-06-20 21:03:19 [INFO] [map_to_career.py] Generating embedding for: engineering
+2025-06-20 21:03:19 [INFO] [map_to_career.py] Embedding generated for: engineering
+2025-06-20 21:03:19 [INFO] [map_to_career.py] Generating embedding for: teaching
+2025-06-20 21:03:19 [INFO] [map_to_career.py] Embedding generated for: teaching
+2025-06-20 21:03:19 [INFO] [map_to_career.py] Generating embedding for: mentoring
+2025-06-20 21:03:20 [INFO] [map_to_career.py] Embedding generated for: mentoring
+2025-06-20 21:03:20 [INFO] [map_to_career.py] Generating embedding for: music
+2025-06-20 21:03:21 [INFO] [map_to_career.py] Embedding generated for: music
+2025-06-20 21:03:21 [INFO] [map_to_career.py] Generating embedding for: singing
+2025-06-20 21:03:21 [INFO] [map_to_career.py] Embedding generated for: singing
+2025-06-20 21:03:21 [INFO] [map_to_career.py] Generating embedding for: photography
+2025-06-20 21:03:22 [INFO] [map_to_career.py] Embedding generated for: photography
+2025-06-20 21:03:22 [INFO] [map_to_career.py] Generating embedding for: videography
+2025-06-20 21:03:22 [INFO] [map_to_career.py] Embedding generated for: videography
+2025-06-20 21:03:22 [INFO] [map_to_career.py] Generating embedding for: fashion
+2025-06-20 21:03:23 [INFO] [map_to_career.py] Embedding generated for: fashion
+2025-06-20 21:03:23 [INFO] [map_to_career.py] Generating embedding for: style
+2025-06-20 21:03:23 [INFO] [map_to_career.py] Embedding generated for: style
+2025-06-20 21:03:23 [INFO] [map_to_career.py] Generating embedding for: history
+2025-06-20 21:03:24 [INFO] [map_to_career.py] Embedding generated for: history
+2025-06-20 21:03:24 [INFO] [map_to_career.py] Generating embedding for: past
+2025-06-20 21:03:25 [INFO] [map_to_career.py] Embedding generated for: past
+2025-06-20 21:03:25 [INFO] [map_to_career.py] Generating embedding for: animals
+2025-06-20 21:03:27 [INFO] [map_to_career.py] Embedding generated for: animals
+2025-06-20 21:03:27 [INFO] [map_to_career.py] Generating embedding for: pets
+2025-06-20 21:03:34 [INFO] [map_to_career.py] Embedding generated for: pets
+2025-06-20 21:03:34 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:03:34 [INFO] [map_to_career.py] Received interests for mapping: ['sketching', 'math', 'helping']
+2025-06-20 21:03:35 [INFO] [map_to_career.py] Processing interest: sketching -> Lemmatized: sketching
+2025-06-20 21:03:35 [INFO] [map_to_career.py] Generating embedding for: sketching
+2025-06-20 21:03:35 [INFO] [map_to_career.py] Embedding generated for: sketching
+2025-06-20 21:03:35 [INFO] [map_to_career.py] Best match for 'sketching': sketching -> Fine Arts
+2025-06-20 21:03:35 [INFO] [map_to_career.py] Requesting synonyms from GPT for: sketching
+2025-06-20 21:03:37 [WARNING] [map_to_career.py] Failed to fetch synonyms for 'sketching': invalid syntax (<string>, line 1)
+2025-06-20 21:03:37 [INFO] [map_to_career.py] Processing interest: math -> Lemmatized: math
+2025-06-20 21:03:37 [INFO] [map_to_career.py] Generating embedding for: math
+2025-06-20 21:03:37 [INFO] [map_to_career.py] Embedding generated for: math
+2025-06-20 21:03:37 [INFO] [map_to_career.py] Best match for 'math': math -> Data Science
+2025-06-20 21:03:37 [INFO] [map_to_career.py] Requesting synonyms from GPT for: math
+2025-06-20 21:03:38 [WARNING] [map_to_career.py] Failed to fetch synonyms for 'math': invalid syntax (<string>, line 1)
+2025-06-20 21:03:38 [INFO] [map_to_career.py] Processing interest: helping -> Lemmatized: helping
+2025-06-20 21:03:38 [INFO] [map_to_career.py] Generating embedding for: helping
+2025-06-20 21:03:39 [INFO] [map_to_career.py] Embedding generated for: helping
+2025-06-20 21:03:39 [INFO] [map_to_career.py] Best match for 'helping': helping -> Social Work
+2025-06-20 21:03:39 [INFO] [map_to_career.py] Requesting synonyms from GPT for: helping
+2025-06-20 21:03:40 [WARNING] [map_to_career.py] Failed to fetch synonyms for 'helping': invalid syntax (<string>, line 1)
+2025-06-20 21:03:40 [INFO] [map_to_career.py] Final matched careers: ['Social Work', 'Fine Arts', 'Data Science']

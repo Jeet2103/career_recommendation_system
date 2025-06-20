@@ -1,0 +1,34 @@
+2025-06-16 15:09:39 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-16 15:13:04 [INFO] [main_flow.py] Pipeline started with user input: i love singing, drawing and reading books
+2025-06-16 15:13:04 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-16 15:13:04 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-16 15:13:04 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-16 15:13:04 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-16 15:13:04 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-16 15:13:06 [INFO] [main_flow.py] Raw response from preference extraction: content='singing, drawing, reading' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 6, 'prompt_tokens': 295, 'total_tokens': 301, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-106fd3e4-f6b2-4c68-aed0-70efd102134f-0' usage_metadata={'input_tokens': 295, 'output_tokens': 6, 'total_tokens': 301}
+2025-06-16 15:13:06 [INFO] [main_flow.py] Extracted interests: ['singing', 'drawing', 'reading']
+2025-06-16 15:13:06 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['singing', 'drawing', 'reading']
+2025-06-16 15:13:06 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-16 15:13:06 [INFO] [map_to_career.py] Received user interests: ['singing', 'drawing', 'reading']
+2025-06-16 15:13:06 [INFO] [map_to_career.py] Formatting career field mapping from base dictionary...
+2025-06-16 15:13:06 [INFO] [map_to_career.py] Mapping formatted successfully.
+2025-06-16 15:13:06 [INFO] [map_to_career.py] ChatOpenAI model initialized.
+2025-06-16 15:13:06 [INFO] [map_to_career.py] Prompt chained with LLM.
+2025-06-16 15:13:08 [INFO] [map_to_career.py] LLM response received: User Interests: ['singing', 'drawing', 'reading']
+
+Career Fields: ['Music Production', 'Graphic Design', 'Uncertain']
+2025-06-16 15:13:08 [INFO] [map_to_career.py] Extracted structured career fields: ['singing', 'drawing', 'reading']
+2025-06-16 15:13:08 [INFO] [main_flow.py] Mapped career fields: ['singing', 'drawing', 'reading']
+2025-06-16 15:13:08 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-16 15:13:08 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-16 15:13:08 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-16 15:13:08 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-16 15:13:08 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-16 15:13:08 [INFO] [main_flow.py] Generating explanation for: {'interest': 'singing, drawing, reading', 'career': 'singing'}
+2025-06-16 15:13:10 [INFO] [main_flow.py] Generated explanation: A career in singing allows for creative expression and emotional storytelling, which can be enhanced by a strong understanding of narrative found in reading. Additionally, drawing can complement a singing career through the creation of visual art for album covers or stage performances, making it a multifaceted artistic path.
+2025-06-16 15:13:10 [INFO] [main_flow.py] Generating explanation for: {'interest': 'singing, drawing, reading', 'career': 'drawing'}
+2025-06-16 15:13:11 [INFO] [main_flow.py] Generated explanation: A career in drawing allows for creative expression, which aligns with the artistic skills developed through singing and reading. Drawing can also enhance storytelling, providing a visual interpretation of narratives found in literature, making it a fitting path for someone passionate about these creative pursuits.
+2025-06-16 15:13:11 [INFO] [main_flow.py] Generating explanation for: {'interest': 'singing, drawing, reading', 'career': 'reading'}
+2025-06-16 15:13:14 [INFO] [main_flow.py] Generated explanation: A career in reading, such as becoming an author, editor, or literary critic, allows for the exploration of storytelling, which can enhance the lyrical and narrative aspects of singing. Additionally, engaging with literature can inspire drawing through visual storytelling and character development, creating a harmonious blend of creativity across these artistic forms.
+2025-06-16 15:13:14 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-16 15:13:14 [INFO] [main_flow.py] CLI execution completed successfully.

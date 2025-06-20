@@ -1,0 +1,58 @@
+2025-06-20 21:51:59 [INFO] [app.py] User submitted interests for processing: i love to dance and always want to learn coding
+2025-06-20 21:51:59 [INFO] [main_flow.py] Pipeline started with user input: i love to dance and always want to learn coding
+2025-06-20 21:52:00 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 21:52:01 [INFO] [main_flow.py] Raw response from preference extraction: content='dance, coding' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 3, 'prompt_tokens': 297, 'total_tokens': 300, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-4b67c399-c291-4da9-b7fa-5bd3d20487f0-0' usage_metadata={'input_tokens': 297, 'output_tokens': 3, 'total_tokens': 300}
+2025-06-20 21:52:01 [INFO] [main_flow.py] Extracted interests: ['dance', 'coding']
+2025-06-20 21:52:01 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['dance', 'coding']
+2025-06-20 21:52:01 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-20 21:52:07 [INFO] [main_flow.py] Mapped career fields: ['Software Engineering', 'Dancer']
+2025-06-20 21:52:07 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-20 21:52:07 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-20 21:52:08 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-20 21:52:08 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-20 21:52:08 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-20 21:52:08 [INFO] [main_flow.py] Generating explanation for: {'interest': 'dance, coding', 'career': 'Software Engineering'}
+2025-06-20 21:52:11 [INFO] [main_flow.py] Generated explanation: A career in Software Engineering can blend creativity and technical skills, allowing someone interested in coding to develop innovative solutions for the dance industry, such as dance apps or choreography software. Additionally, the analytical thinking and problem-solving skills honed in coding can enhance a dancer's ability to create and analyze movement patterns, leading to unique artistic expressions.
+2025-06-20 21:52:11 [INFO] [main_flow.py] Generating explanation for: {'interest': 'dance, coding', 'career': 'Dancer'}
+2025-06-20 21:52:13 [INFO] [main_flow.py] Generated explanation: A career as a dancer allows for creative expression and physical artistry, which can be enhanced by coding skills through choreography software, animation, or developing interactive dance performances. This unique combination enables a dancer to innovate and explore new dimensions in both performance and technology, making it a suitable path for someone with interests in both dance and coding.
+2025-06-20 21:52:13 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-20 21:55:49 [INFO] [app.py] User submitted input: I like drawing, storytelling and animals
+2025-06-20 21:55:49 [INFO] [main_flow.py] Pipeline started with user input: I like drawing, storytelling and animals
+2025-06-20 21:55:50 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 21:55:52 [INFO] [main_flow.py] Raw response from preference extraction: content='drawing, storytelling, animals' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 5, 'prompt_tokens': 294, 'total_tokens': 299, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-734e4024-fc8d-4aa3-a5d9-786cdbf521b3-0' usage_metadata={'input_tokens': 294, 'output_tokens': 5, 'total_tokens': 299}
+2025-06-20 21:55:52 [INFO] [main_flow.py] Extracted interests: ['drawing', 'storytelling', 'animals']
+2025-06-20 21:55:52 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['drawing', 'storytelling', 'animals']
+2025-06-20 21:55:52 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-20 21:55:59 [INFO] [main_flow.py] Mapped career fields: ['Screenwriting', 'Graphic Design', 'Veterinary Science']
+2025-06-20 21:55:59 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-20 21:55:59 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-20 21:56:00 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-20 21:56:00 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-20 21:56:00 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-20 21:56:00 [INFO] [main_flow.py] Generating explanation for: {'interest': 'drawing, storytelling, animals', 'career': 'Screenwriting'}
+2025-06-20 21:56:02 [INFO] [main_flow.py] Generated explanation: A career in screenwriting is a suitable path for someone interested in storytelling as it allows for the creation of compelling narratives and character arcs. Additionally, incorporating animals into screenplays can bring unique perspectives and emotional depth, while drawing skills can enhance the visualization of scenes and characters, making the storytelling experience even more vibrant and engaging.
+2025-06-20 21:56:02 [INFO] [main_flow.py] Generating explanation for: {'interest': 'drawing, storytelling, animals', 'career': 'Graphic Design'}
+2025-06-20 21:56:05 [INFO] [main_flow.py] Generated explanation: A career in Graphic Design is ideal for someone who enjoys drawing and storytelling, as it allows for the creative expression of ideas through visual art. Additionally, incorporating animals into designs can enhance storytelling by bringing characters and narratives to life, making the work engaging and relatable. This field offers the opportunity to blend artistic skills with imaginative concepts, appealing to both personal passions and professional growth.
+2025-06-20 21:56:05 [INFO] [main_flow.py] Generating explanation for: {'interest': 'drawing, storytelling, animals', 'career': 'Veterinary Science'}
+2025-06-20 21:56:07 [INFO] [main_flow.py] Generated explanation: A career in Veterinary Science allows you to combine your passion for animals with your drawing skills through the documentation and illustration of animal anatomy and health. Additionally, storytelling can play a vital role in educating pet owners about animal care and welfare, making your work both visually engaging and impactful.
+2025-06-20 21:56:07 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-20 21:59:47 [INFO] [app.py] User submitted input: I like drawing, storytelling and animals
+2025-06-20 21:59:47 [INFO] [main_flow.py] Pipeline started with user input: I like drawing, storytelling and animals
+2025-06-20 21:59:48 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 21:59:49 [INFO] [main_flow.py] Raw response from preference extraction: content='drawing, storytelling, animals' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 5, 'prompt_tokens': 294, 'total_tokens': 299, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-15cd7a0a-bfea-4dc9-b0a4-96eb7b85d84a-0' usage_metadata={'input_tokens': 294, 'output_tokens': 5, 'total_tokens': 299}
+2025-06-20 21:59:49 [INFO] [main_flow.py] Extracted interests: ['drawing', 'storytelling', 'animals']
+2025-06-20 21:59:49 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['drawing', 'storytelling', 'animals']
+2025-06-20 21:59:49 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-20 21:59:54 [INFO] [main_flow.py] Mapped career fields: ['Screenwriting', 'Graphic Design', 'Veterinary Science']
+2025-06-20 21:59:54 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-20 21:59:54 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-20 21:59:55 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-20 21:59:55 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-20 21:59:55 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-20 21:59:55 [INFO] [main_flow.py] Generating explanation for: {'interest': 'drawing, storytelling, animals', 'career': 'Screenwriting'}
+2025-06-20 21:59:57 [INFO] [main_flow.py] Generated explanation: A career in screenwriting is ideal for someone interested in storytelling, as it allows you to craft engaging narratives that can bring characters and worlds to life. Additionally, incorporating animals into your scripts can add depth and emotional resonance, appealing to both audiences and your passion for drawing by visualizing these stories in unique, artistic ways.
+2025-06-20 21:59:57 [INFO] [main_flow.py] Generating explanation for: {'interest': 'drawing, storytelling, animals', 'career': 'Graphic Design'}
+2025-06-20 21:59:59 [INFO] [main_flow.py] Generated explanation: A career in Graphic Design is ideal for someone interested in drawing and storytelling, as it allows for the creation of visually engaging narratives through illustrations and design elements. Additionally, incorporating animal themes can lead to unique projects in areas like children's book illustrations, branding for pet-related businesses, or wildlife conservation campaigns, merging artistic expression with a passion for animals.
+2025-06-20 21:59:59 [INFO] [main_flow.py] Generating explanation for: {'interest': 'drawing, storytelling, animals', 'career': 'Veterinary Science'}
+2025-06-20 22:00:00 [INFO] [main_flow.py] Generated explanation: A career in Veterinary Science allows you to work closely with animals, combining your passion for their well-being with your artistic skills through tasks like creating educational materials or illustrating animal care guides. Additionally, storytelling can be a powerful tool in communicating with pet owners about their animals' health and behaviors, making your role not only about medicine but also about connecting with and educating others.
+2025-06-20 22:00:00 [INFO] [main_flow.py] Pipeline completed successfully.

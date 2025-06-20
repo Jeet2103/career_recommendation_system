@@ -1,0 +1,28 @@
+2025-06-20 21:15:50 [INFO] [map_to_career.py] Preparing FAISS index from base mapping...
+2025-06-20 21:16:16 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:16:16 [INFO] [map_to_career.py] Received interests for mapping: ['sketching', 'math', 'helping', 'Drawing']
+2025-06-20 21:16:17 [INFO] [map_to_career.py] Processing interest: sketching -> Lemmatized: sketching
+2025-06-20 21:16:17 [INFO] [map_to_career.py] Generating Embedding for sketching
+2025-06-20 21:16:17 [INFO] [map_to_career.py] Embedding generating completed.
+2025-06-20 21:16:17 [INFO] [map_to_career.py] Best match for 'sketching': sketching -> Fine Arts
+2025-06-20 21:16:17 [INFO] [map_to_career.py] Requesting synonyms from GPT for: sketching
+2025-06-20 21:16:18 [WARNING] [map_to_career.py] Failed to fetch synonyms for 'sketching': invalid syntax (<string>, line 1)
+2025-06-20 21:16:18 [INFO] [map_to_career.py] Processing interest: math -> Lemmatized: math
+2025-06-20 21:16:18 [INFO] [map_to_career.py] Generating Embedding for math
+2025-06-20 21:16:18 [INFO] [map_to_career.py] Embedding generating completed.
+2025-06-20 21:16:18 [INFO] [map_to_career.py] Best match for 'math': math -> Data Science
+2025-06-20 21:16:18 [INFO] [map_to_career.py] Requesting synonyms from GPT for: math
+2025-06-20 21:16:21 [WARNING] [map_to_career.py] Failed to fetch synonyms for 'math': invalid syntax (<string>, line 1)
+2025-06-20 21:16:21 [INFO] [map_to_career.py] Processing interest: helping -> Lemmatized: helping
+2025-06-20 21:16:21 [INFO] [map_to_career.py] Generating Embedding for helping
+2025-06-20 21:16:22 [INFO] [map_to_career.py] Embedding generating completed.
+2025-06-20 21:16:22 [INFO] [map_to_career.py] Best match for 'helping': helping -> Social Work
+2025-06-20 21:16:22 [INFO] [map_to_career.py] Requesting synonyms from GPT for: helping
+2025-06-20 21:16:23 [WARNING] [map_to_career.py] Failed to fetch synonyms for 'helping': invalid syntax (<string>, line 1)
+2025-06-20 21:16:23 [INFO] [map_to_career.py] Processing interest: Drawing -> Lemmatized: drawing
+2025-06-20 21:16:23 [INFO] [map_to_career.py] Generating Embedding for drawing
+2025-06-20 21:16:23 [INFO] [map_to_career.py] Embedding generating completed.
+2025-06-20 21:16:23 [INFO] [map_to_career.py] Best match for 'drawing': drawing -> Graphic Design
+2025-06-20 21:16:23 [INFO] [map_to_career.py] Requesting synonyms from GPT for: drawing
+2025-06-20 21:16:25 [WARNING] [map_to_career.py] Failed to fetch synonyms for 'drawing': invalid syntax (<string>, line 1)
+2025-06-20 21:16:25 [INFO] [map_to_career.py] Final matched careers: ['Graphic Design', 'Data Science', 'Fine Arts', 'Social Work']

@@ -1,6 +1,6 @@
 # Import core pipeline components
 from extract_preferences import get_preferences_chain
-from map_to_career import map_interests_with_llm
+from map_to_career import map_interest_to_career
 from explain_recommendation import get_explanation_chain
 from fallback_handling import check_for_fallback
 
@@ -40,7 +40,7 @@ def run_pipeline(user_input):
             return f"Clarification Needed:\n{fallback_prompt}"
 
         # Step 3: Map extracted interests to career fields
-        career_fields = map_interests_with_llm(interests)
+        career_fields = map_interest_to_career(interests)
         logger.info("Mapped career fields: %s", career_fields)
 
         # Step 4: Generate explanations for each career path

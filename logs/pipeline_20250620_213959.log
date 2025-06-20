@@ -1,0 +1,19 @@
+2025-06-20 21:39:59 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-20 21:40:50 [INFO] [main_flow.py] Pipeline started with user input: i love to dance and always want to learn guitter 
+2025-06-20 21:40:50 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 21:40:51 [INFO] [main_flow.py] Raw response from preference extraction: content='dance, guitar' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 3, 'prompt_tokens': 298, 'total_tokens': 301, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-e250b9ad-1ab2-461d-b1c7-89fa49ed1e10-0' usage_metadata={'input_tokens': 298, 'output_tokens': 3, 'total_tokens': 301}
+2025-06-20 21:40:51 [INFO] [main_flow.py] Extracted interests: ['dance', 'guitar']
+2025-06-20 21:40:51 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['dance', 'guitar']
+2025-06-20 21:40:51 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-20 21:40:56 [INFO] [main_flow.py] Mapped career fields: ['Music Production', 'Animation & VFX']
+2025-06-20 21:40:56 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-20 21:40:56 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-20 21:40:56 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-20 21:40:56 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-20 21:40:56 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-20 21:40:56 [INFO] [main_flow.py] Generating explanation for: {'interest': 'dance, guitar', 'career': 'Music Production'}
+2025-06-20 21:40:58 [INFO] [main_flow.py] Generated explanation: A career in Music Production is ideal for someone interested in dance and guitar, as it allows for the fusion of rhythmic sounds and danceable beats, enhancing the overall experience of dance performances. Additionally, producing guitar-driven tracks can create captivating music that inspires movement and creativity, bridging the gap between the two passions.
+2025-06-20 21:40:58 [INFO] [main_flow.py] Generating explanation for: {'interest': 'dance, guitar', 'career': 'Animation & VFX'}
+2025-06-20 21:41:01 [INFO] [main_flow.py] Generated explanation: A career in Animation & VFX can be a great fit for someone interested in dance and guitar, as both fields require a strong sense of movement and rhythm. Animators can bring dance to life through fluid character movements, while VFX can enhance musical performances by integrating dynamic visual effects that complement the rhythm and energy of guitar music. This combination allows for creative expression that merges artistic skills with technology.
+2025-06-20 21:41:01 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-20 21:41:01 [INFO] [main_flow.py] CLI execution completed successfully.

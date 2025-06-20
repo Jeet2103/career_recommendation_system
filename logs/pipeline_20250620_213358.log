@@ -1,0 +1,17 @@
+2025-06-20 21:33:59 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-20 21:34:18 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-20 21:34:18 [INFO] [map_to_career.py] Mapping user interests: ['sketching', 'math', 'helping', 'Drawing']
+2025-06-20 21:34:19 [INFO] [map_to_career.py] Interest 'sketching' lemmatized to 'sketching'
+2025-06-20 21:34:20 [INFO] [map_to_career.py] Best FAISS match for 'sketching': sketching -> Fine Arts
+2025-06-20 21:34:20 [INFO] [map_to_career.py] Requesting synonyms from GPT for: sketching
+2025-06-20 21:34:21 [INFO] [map_to_career.py] Synonym 'drawing' matched to Graphic Design
+2025-06-20 21:34:21 [INFO] [map_to_career.py] Interest 'math' lemmatized to 'math'
+2025-06-20 21:34:21 [INFO] [map_to_career.py] Best FAISS match for 'math': math -> Data Science
+2025-06-20 21:34:21 [INFO] [map_to_career.py] Requesting synonyms from GPT for: math
+2025-06-20 21:34:22 [INFO] [map_to_career.py] Interest 'helping' lemmatized to 'helping'
+2025-06-20 21:34:23 [INFO] [map_to_career.py] Best FAISS match for 'helping': helping -> Social Work
+2025-06-20 21:34:23 [INFO] [map_to_career.py] Requesting synonyms from GPT for: helping
+2025-06-20 21:34:24 [INFO] [map_to_career.py] Interest 'Drawing' lemmatized to 'drawing'
+2025-06-20 21:34:25 [INFO] [map_to_career.py] Best FAISS match for 'drawing': drawing -> Graphic Design
+2025-06-20 21:34:25 [INFO] [map_to_career.py] Requesting synonyms from GPT for: drawing
+2025-06-20 21:34:26 [INFO] [map_to_career.py] Final mapped careers: ['Fine Arts', 'Social Work', 'Data Science', 'Graphic Design']

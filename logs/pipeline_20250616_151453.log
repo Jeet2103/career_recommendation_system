@@ -1,0 +1,31 @@
+2025-06-16 15:14:53 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-16 15:15:28 [INFO] [main_flow.py] Pipeline started with user input: i am good at ball throwing 
+2025-06-16 15:15:28 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-16 15:15:28 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-16 15:15:29 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-16 15:15:29 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-16 15:15:29 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-16 15:15:30 [INFO] [main_flow.py] Raw response from preference extraction: content='ball throwing, sports' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 4, 'prompt_tokens': 293, 'total_tokens': 297, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-d2519c90-18aa-419f-b3e5-aeca57557c39-0' usage_metadata={'input_tokens': 293, 'output_tokens': 4, 'total_tokens': 297}
+2025-06-16 15:15:30 [INFO] [main_flow.py] Extracted interests: ['ball throwing', 'sports']
+2025-06-16 15:15:30 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['ball throwing', 'sports']
+2025-06-16 15:15:30 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-16 15:15:30 [INFO] [map_to_career.py] Received user interests: ['ball throwing', 'sports']
+2025-06-16 15:15:30 [INFO] [map_to_career.py] Formatting career field mapping from base dictionary...
+2025-06-16 15:15:30 [INFO] [map_to_career.py] Mapping formatted successfully.
+2025-06-16 15:15:30 [INFO] [map_to_career.py] ChatOpenAI model initialized.
+2025-06-16 15:15:30 [INFO] [map_to_career.py] Prompt chained with LLM.
+2025-06-16 15:15:31 [INFO] [map_to_career.py] LLM response received: User Interests: ['ball throwing', 'sports']  
+Career Fields: ['Athletics']
+2025-06-16 15:15:31 [INFO] [map_to_career.py] Extracted structured career fields: ['ball throwing', 'sports']
+2025-06-16 15:15:31 [INFO] [main_flow.py] Mapped career fields: ['ball throwing', 'sports']
+2025-06-16 15:15:31 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-16 15:15:31 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-16 15:15:31 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-16 15:15:31 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-16 15:15:31 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-16 15:15:31 [INFO] [main_flow.py] Generating explanation for: {'interest': 'ball throwing, sports', 'career': 'ball throwing'}
+2025-06-16 15:15:33 [INFO] [main_flow.py] Generated explanation: A career in ball throwing allows individuals to leverage their passion for sports while honing their skills in techniques that enhance performance. It offers opportunities in various professional arenas, including athletics, coaching, and sports management, allowing enthusiasts to engage with the sport they love while inspiring others.
+2025-06-16 15:15:33 [INFO] [main_flow.py] Generating explanation for: {'interest': 'ball throwing, sports', 'career': 'sports'}
+2025-06-16 15:15:35 [INFO] [main_flow.py] Generated explanation: A career in sports, particularly in ball throwing disciplines like baseball, basketball, or football, allows individuals to leverage their passion and skills in a competitive environment. This path offers opportunities for athletic development, teamwork, and the chance to inspire others through performance and sportsmanship. Additionally, it can lead to various roles, including coaching, sports management, or athletic training, all centered around the excitement of ball sports.
+2025-06-16 15:15:35 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-16 15:15:35 [INFO] [main_flow.py] CLI execution completed successfully.
