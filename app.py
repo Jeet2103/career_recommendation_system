@@ -17,6 +17,17 @@ st.set_page_config(
 # ----------------- Dark Mode Styling -----------------
 st.markdown("""
 <style>
+/* Page Background Image */
+body {
+    background-image: url("https://i.pinimg.com/736x/d1/f5/fc/d1f5fceea6d7c8325296cef44f6adcf1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.95;
+}
+
+/* Text Styling */
 h1 {
     text-align: center;
     color: white;
@@ -32,8 +43,10 @@ h1 {
     color: white;
     font-size: 16px;
 }
+
+/* Recommendation Box Styling */
 .recommend-box {
-    background-color: #2c2c2c;
+    background-color: rgba(44, 44, 44, 0.95);
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -46,6 +59,7 @@ h1 {
 <h1>🎓 Career Path Recommender</h1>
 <div class='desc'>Powered by AI · Describe your interests to discover the perfect career paths</div>
 """, unsafe_allow_html=True)
+
 
 # ----------------- Input Text Area -----------------
 user_input = st.text_area("✏️ Enter your interests (e.g., 'I love sketching and programming'):", height=150)

@@ -1,0 +1,12 @@
+2025-06-21 11:51:12 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-21 11:51:12 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-21 11:51:12 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-21 11:51:12 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-21 11:58:07 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-21 11:58:07 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-21 11:58:08 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-21 11:58:08 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-21 11:59:22 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-21 11:59:22 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-21 11:59:22 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-21 11:59:22 [INFO] [extract_preferences.py] LLMChain created successfully.

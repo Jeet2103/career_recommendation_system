@@ -1,0 +1,48 @@
+2025-06-21 11:51:12 [INFO] [app.py] User submitted input: i love pets
+2025-06-21 11:51:12 [INFO] [main_flow.py] Pipeline started with user input: i love pets
+2025-06-21 11:51:12 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 11:51:13 [INFO] [main_flow.py] Raw response from preference extraction: content='Interests: pets' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 4, 'prompt_tokens': 290, 'total_tokens': 294, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-e4c97adb-6ee3-405e-8dba-f2b80e2d35e3-0' usage_metadata={'input_tokens': 290, 'output_tokens': 4, 'total_tokens': 294}
+2025-06-21 11:51:13 [INFO] [main_flow.py] Extracted interests: ['Interests: pets']
+2025-06-21 11:51:13 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['Interests: pets']
+2025-06-21 11:51:13 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-21 11:51:17 [INFO] [main_flow.py] Mapped career fields: ['Veterinary Science']
+2025-06-21 11:51:17 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 11:51:17 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 11:51:18 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 11:51:18 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 11:51:18 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 11:51:18 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests: pets', 'career': 'Veterinary Science'}
+2025-06-21 11:51:19 [INFO] [main_flow.py] Generated explanation: A career in Veterinary Science is ideal for someone interested in pets because it allows you to directly care for and improve the health and well-being of animals. This path provides opportunities to work closely with various species, diagnose health issues, and contribute to the overall welfare of pets, fulfilling a passion for animal care and companionship.
+2025-06-21 11:51:19 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-21 11:58:07 [INFO] [app.py] User submitted input: i love programming 
+2025-06-21 11:58:07 [INFO] [main_flow.py] Pipeline started with user input: i love programming 
+2025-06-21 11:58:08 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 11:58:09 [INFO] [main_flow.py] Raw response from preference extraction: content='programming' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 2, 'prompt_tokens': 290, 'total_tokens': 292, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-31d00c19-91c4-4ac6-8373-9f15203d40e2-0' usage_metadata={'input_tokens': 290, 'output_tokens': 2, 'total_tokens': 292}
+2025-06-21 11:58:09 [INFO] [main_flow.py] Extracted interests: ['programming']
+2025-06-21 11:58:09 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['programming']
+2025-06-21 11:58:09 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-21 11:58:11 [INFO] [main_flow.py] Mapped career fields: ['Software Engineering']
+2025-06-21 11:58:11 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 11:58:11 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 11:58:11 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 11:58:11 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 11:58:11 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 11:58:11 [INFO] [main_flow.py] Generating explanation for: {'interest': 'programming', 'career': 'Software Engineering'}
+2025-06-21 11:58:13 [INFO] [main_flow.py] Generated explanation: A career in Software Engineering is ideal for someone interested in programming because it allows you to apply coding skills to solve real-world problems and develop innovative software solutions. It offers opportunities for creativity, collaboration, and continuous learning in a rapidly evolving field, making it both challenging and rewarding.
+2025-06-21 11:58:13 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-21 11:59:22 [INFO] [app.py] User submitted input: i love dancing
+2025-06-21 11:59:22 [INFO] [main_flow.py] Pipeline started with user input: i love dancing
+2025-06-21 11:59:22 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 11:59:23 [INFO] [main_flow.py] Raw response from preference extraction: content='dancing' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 2, 'prompt_tokens': 290, 'total_tokens': 292, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-7f5ea1be-1241-4c47-a8ba-24415c1678e3-0' usage_metadata={'input_tokens': 290, 'output_tokens': 2, 'total_tokens': 292}
+2025-06-21 11:59:23 [INFO] [main_flow.py] Extracted interests: ['dancing']
+2025-06-21 11:59:23 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['dancing']
+2025-06-21 11:59:23 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-21 11:59:25 [INFO] [main_flow.py] Mapped career fields: ['Dancer']
+2025-06-21 11:59:25 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 11:59:25 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 11:59:26 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 11:59:26 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 11:59:26 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 11:59:26 [INFO] [main_flow.py] Generating explanation for: {'interest': 'dancing', 'career': 'Dancer'}
+2025-06-21 11:59:28 [INFO] [main_flow.py] Generated explanation: A career as a dancer allows individuals to express their passion for movement and artistry while showcasing their creativity and talent on stage. It offers opportunities to perform in various styles, collaborate with other artists, and continuously develop skills through training and performances, making it an ideal path for someone deeply interested in dancing.
+2025-06-21 11:59:28 [INFO] [main_flow.py] Pipeline completed successfully.

@@ -1,0 +1,26 @@
+2025-06-20 23:56:23 [INFO] [app.py] User submitted input: i love cooking
+2025-06-20 23:56:23 [INFO] [main_flow.py] Pipeline started with user input: i love cooking
+2025-06-20 23:56:24 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 23:56:24 [ERROR] [main_flow.py] Error in pipeline execution: create() got an unexpected keyword argument 'openai_Api_key'
+2025-06-20 23:58:11 [INFO] [app.py] User submitted input: i love cooking
+
+2025-06-20 23:58:11 [INFO] [main_flow.py] Pipeline started with user input: i love cooking
+
+2025-06-20 23:58:12 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 23:58:12 [ERROR] [main_flow.py] Error in pipeline execution: create() got an unexpected keyword argument 'openai_Api_key'
+2025-06-20 23:59:40 [INFO] [app.py] User submitted input: i love cooking 
+2025-06-20 23:59:40 [INFO] [main_flow.py] Pipeline started with user input: i love cooking 
+2025-06-20 23:59:41 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-20 23:59:43 [INFO] [main_flow.py] Raw response from preference extraction: content='cooking' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 2, 'prompt_tokens': 290, 'total_tokens': 292, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-24db9ee1-d479-4a50-bd3d-86848a9d68e8-0' usage_metadata={'input_tokens': 290, 'output_tokens': 2, 'total_tokens': 292}
+2025-06-20 23:59:43 [INFO] [main_flow.py] Extracted interests: ['cooking']
+2025-06-20 23:59:43 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['cooking']
+2025-06-20 23:59:43 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-20 23:59:46 [INFO] [main_flow.py] Mapped career fields: ['Chef']
+2025-06-20 23:59:46 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-20 23:59:46 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-20 23:59:47 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-20 23:59:47 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-20 23:59:47 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-20 23:59:47 [INFO] [main_flow.py] Generating explanation for: {'interest': 'cooking', 'career': 'Chef'}
+2025-06-20 23:59:48 [INFO] [main_flow.py] Generated explanation: A career as a chef allows individuals passionate about cooking to explore their creativity and culinary skills while working in a dynamic environment. It offers opportunities to experiment with flavors, techniques, and presentation, making it a fulfilling path for those who love to create and share delicious dishes.
+2025-06-20 23:59:48 [INFO] [main_flow.py] Pipeline completed successfully.

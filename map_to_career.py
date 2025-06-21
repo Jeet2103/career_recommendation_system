@@ -5,19 +5,20 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 from openai import OpenAI as OpenAIClient
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 from logger_config.logger import get_logger
 import ast  # for safe parsing of GPT responses
 import streamlit as st
 
 # Load environment variables and NLTK resources
-# load_dotenv()
+load_dotenv()
 nltk.download('wordnet')
 
 # Initialize components
 logger = get_logger(__name__)
 lemmatizer = WordNetLemmatizer()
-openai_client = OpenAIClient(api_key=st.secrets["OPENAI_API_KEY"])
+# openai_client = OpenAIClient(api_key=st.secrets["OPENAI_API_KEY"])
+openai_client = OpenAIClient(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Define base interest-to-career mapping
 base_mapping = {

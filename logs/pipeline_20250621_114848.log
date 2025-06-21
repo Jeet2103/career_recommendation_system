@@ -1,0 +1,28 @@
+2025-06-21 11:48:49 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 11:49:14 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 11:50:32 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 11:50:53 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 11:51:13 [INFO] [map_to_career.py] Mapping user interests: ['Interests: pets']
+2025-06-21 11:51:15 [INFO] [map_to_career.py] Interest 'Interests: pets' lemmatized to 'interests: pets'
+2025-06-21 11:51:16 [INFO] [map_to_career.py] Best FAISS match for 'interests: pets': pets -> Veterinary Science
+2025-06-21 11:51:16 [INFO] [map_to_career.py] Requesting synonyms from GPT for: interests: pets
+2025-06-21 11:51:17 [INFO] [map_to_career.py] Final mapped careers: ['Veterinary Science']
+2025-06-21 11:53:46 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 11:54:07 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 11:55:15 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 11:55:37 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 11:57:30 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 11:57:49 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 11:58:09 [INFO] [map_to_career.py] Mapping user interests: ['programming']
+2025-06-21 11:58:09 [INFO] [map_to_career.py] Interest 'programming' lemmatized to 'programming'
+2025-06-21 11:58:09 [INFO] [map_to_career.py] Best FAISS match for 'programming': programming -> Software Engineering
+2025-06-21 11:58:09 [INFO] [map_to_career.py] Requesting synonyms from GPT for: programming
+2025-06-21 11:58:11 [INFO] [map_to_career.py] Synonym 'coding' matched to Software Engineering
+2025-06-21 11:58:11 [INFO] [map_to_career.py] Final mapped careers: ['Software Engineering']
+2025-06-21 11:58:45 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 11:59:06 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 11:59:23 [INFO] [map_to_career.py] Mapping user interests: ['dancing']
+2025-06-21 11:59:23 [INFO] [map_to_career.py] Interest 'dancing' lemmatized to 'dancing'
+2025-06-21 11:59:24 [INFO] [map_to_career.py] Best FAISS match for 'dancing': Dancing -> Dancer
+2025-06-21 11:59:24 [INFO] [map_to_career.py] Requesting synonyms from GPT for: dancing
+2025-06-21 11:59:25 [INFO] [map_to_career.py] Final mapped careers: ['Dancer']
