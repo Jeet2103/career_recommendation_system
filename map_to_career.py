@@ -17,8 +17,8 @@ nltk.download('wordnet')
 # Initialize components
 logger = get_logger(__name__)
 lemmatizer = WordNetLemmatizer()
-# openai_client = OpenAIClient(api_key=st.secrets["OPENAI_API_KEY"])
-openai_client = OpenAIClient(api_key=os.getenv("OPENAI_API_KEY"))
+openai_client = OpenAIClient(api_key=st.secrets["OPENAI_API_KEY"])
+# openai_client = OpenAIClient(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Define base interest-to-career mapping
 base_mapping = {

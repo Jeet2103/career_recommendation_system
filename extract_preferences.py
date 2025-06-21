@@ -72,8 +72,8 @@ def get_preferences_chain():
         llm = ChatOpenAI(
             model_name="gpt-4o-mini", 
             temperature=0.4, 
-            # openai_api_key = st.secrets["OPENAI_API_KEY"]
-            api_key = os.getenv("OPENAI_API_KEY")
+            openai_api_key = st.secrets["OPENAI_API_KEY"]
+            # api_key = os.getenv("OPENAI_API_KEY")
         )
         logger.info("LLM initialized with gpt-4o-mini.")
 

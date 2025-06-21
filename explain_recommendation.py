@@ -39,8 +39,8 @@ def get_explanation_chain():
         llm = ChatOpenAI(
             model_name="gpt-4o-mini",           # Using GPT-4o mini model
             temperature=0.6,                    # Medium creativity for variation in explanations
-            openai_api_key=os.getenv("OPENAI_API_KEY")  # Load API key from environment
-            # openai_api_key = st.secrets["OPENAI_API_KEY"]
+            # openai_api_key=os.getenv("OPENAI_API_KEY")  # Load API key from environment
+            openai_api_key = st.secrets["OPENAI_API_KEY"]
         )
         logger.info("ChatOpenAI LLM initialized with model gpt-4o-mini.")
 
