@@ -37,6 +37,9 @@ def get_preferences_chain():
                 - Do not include emotions or traits like "happy" or "curious" unless they relate to a domain (e.g., curiosity in science).
                 - Generalize similar words (e.g., "painting, sketching, drawing" → "drawing").
                 - Avoid duplicates and keep the result simple and domain-relevant.
+                - Only return a valid Python list of lowercase strings (e.g., ["drawing", "animation"]).
+                - No extra text, explanations, or prefixes.
+                - If no valid interest is found, return an empty list: []
 
                 Examples:
 
@@ -55,10 +58,12 @@ def get_preferences_chain():
                 User: I spend time volunteering, helping kids, and working in community projects.
                 Interests: volunteering, social work, community service
 
+                User: I'm curious and happy.
+                []
+
                 Now, extract the interests based on the user's input below.
 
                 User: {user_input}
-                Interests:
             """
         )
         logger.info("Prompt template created successfully.")
@@ -90,7 +95,7 @@ if __name__ == "__main__":
         chain = get_preferences_chain()
 
         # Example user input
-        input_text = "I am proficient at drawing, sketching and monochrome painting."
+        input_text = "I am "
         logger.info(f"User input received: {input_text}")
 
         # Get response from the chain

@@ -1,0 +1,86 @@
+2025-06-21 12:52:52 [INFO] [app.py] User submitted input: i am very curious boy
+2025-06-21 12:52:52 [INFO] [main_flow.py] Pipeline started with user input: i am very curious boy
+2025-06-21 12:52:53 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:52:54 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 347, 'total_tokens': 348, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-3664757f-c5c6-4446-a375-826b3276a95e-0' usage_metadata={'input_tokens': 347, 'output_tokens': 1, 'total_tokens': 348}
+2025-06-21 12:52:54 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 12:52:54 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 12:52:54 [WARNING] [fallback_handling.py] Interests list contains string '[]' — triggering fallback.
+2025-06-21 12:52:54 [INFO] [fallback_handling.py] Creating fallback prompt template...
+2025-06-21 12:52:54 [INFO] [fallback_handling.py] PromptTemplate for fallback question created successfully.
+2025-06-21 12:52:54 [INFO] [fallback_handling.py] ChatOpenAI LLM initialized for fallback chain.
+2025-06-21 12:52:54 [INFO] [fallback_handling.py] Fallback LLMChain created successfully.
+2025-06-21 12:52:54 [ERROR] [fallback_handling.py] Fallback check failed: 'RunnableSequence' object has no attribute 'run'
+2025-06-21 12:52:54 [WARNING] [main_flow.py] Fallback triggered due to ambiguous interests.
+2025-06-21 12:55:47 [INFO] [app.py] User submitted input: i am a very curious boy
+2025-06-21 12:55:47 [INFO] [main_flow.py] Pipeline started with user input: i am a very curious boy
+2025-06-21 12:55:48 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:55:49 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 348, 'total_tokens': 349, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-2bfa0335-3c62-4997-920c-0aa2ea7d7909-0' usage_metadata={'input_tokens': 348, 'output_tokens': 1, 'total_tokens': 349}
+2025-06-21 12:55:49 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 12:55:49 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 12:55:49 [WARNING] [fallback_handling.py] Interests list contains string '[]' — triggering fallback.
+2025-06-21 12:55:49 [INFO] [fallback_handling.py] Creating fallback prompt template...
+2025-06-21 12:55:49 [INFO] [fallback_handling.py] PromptTemplate for fallback question created successfully.
+2025-06-21 12:55:50 [INFO] [fallback_handling.py] ChatOpenAI LLM initialized for fallback chain.
+2025-06-21 12:55:50 [INFO] [fallback_handling.py] Fallback LLMChain created successfully.
+2025-06-21 12:55:50 [ERROR] [fallback_handling.py] Fallback check failed: Invalid input type <class 'dict'>. Must be a PromptValue, str, or list of BaseMessages.
+2025-06-21 12:55:50 [WARNING] [main_flow.py] Fallback triggered due to ambiguous interests.
+2025-06-21 13:00:16 [INFO] [app.py] User submitted input: i am a very curious boy
+2025-06-21 13:00:16 [INFO] [main_flow.py] Pipeline started with user input: i am a very curious boy
+2025-06-21 13:00:16 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 13:00:17 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 348, 'total_tokens': 349, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-78d5a582-94f1-4da0-96f6-72e8091a2c60-0' usage_metadata={'input_tokens': 348, 'output_tokens': 1, 'total_tokens': 349}
+2025-06-21 13:00:17 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 13:00:17 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 13:00:17 [WARNING] [fallback_handling.py] Fallback triggered due to no valid interests.
+2025-06-21 13:00:17 [INFO] [fallback_handling.py] Creating fallback prompt and LLM chain using | pipe...
+2025-06-21 13:00:18 [INFO] [fallback_handling.py] Prompt | LLM chain created successfully.
+2025-06-21 13:00:19 [INFO] [fallback_handling.py] Generated fallback question: What specific topics or subjects are you curious about?
+2025-06-21 13:00:19 [WARNING] [main_flow.py] Fallback triggered due to ambiguous interests.
+2025-06-21 13:02:35 [INFO] [app.py] User submitted input: i am a very curious boy
+2025-06-21 13:02:35 [INFO] [main_flow.py] Pipeline started with user input: i am a very curious boy
+2025-06-21 13:02:36 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 13:02:37 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 348, 'total_tokens': 349, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-53e89e9b-f264-43a5-a8c0-d4002ec6b0d8-0' usage_metadata={'input_tokens': 348, 'output_tokens': 1, 'total_tokens': 349}
+2025-06-21 13:02:37 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 13:02:37 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 13:02:37 [WARNING] [fallback_handling.py] Fallback triggered due to no valid interests.
+2025-06-21 13:02:37 [INFO] [fallback_handling.py] Creating fallback prompt and LLM chain using | pipe...
+2025-06-21 13:02:37 [INFO] [fallback_handling.py] Prompt | LLM chain created successfully.
+2025-06-21 13:02:38 [INFO] [fallback_handling.py] Generated fallback question: What specific topics or subjects are you curious about?
+2025-06-21 13:02:38 [WARNING] [main_flow.py] Fallback triggered due to ambiguous interests.
+2025-06-21 14:35:21 [INFO] [app.py] User submitted input: i am good in a relationship
+2025-06-21 14:35:21 [INFO] [main_flow.py] Pipeline started with user input: i am good in a relationship
+2025-06-21 14:35:22 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 14:35:23 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 348, 'total_tokens': 349, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-48e7194f-9ac6-4522-ab1e-c49b66c6fed5-0' usage_metadata={'input_tokens': 348, 'output_tokens': 1, 'total_tokens': 349}
+2025-06-21 14:35:23 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 14:35:23 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 14:35:23 [WARNING] [fallback_handling.py] Fallback triggered due to no valid interests.
+2025-06-21 14:35:23 [INFO] [fallback_handling.py] Creating fallback prompt and LLM chain using | pipe...
+2025-06-21 14:35:24 [INFO] [fallback_handling.py] Prompt | LLM chain created successfully.
+2025-06-21 14:35:25 [INFO] [fallback_handling.py] Generated fallback question: Could you clarify what aspects of being good in a relationship you’d like to discuss? For example, are you interested in communication, trust, or something else?
+2025-06-21 14:35:25 [WARNING] [main_flow.py] Fallback triggered due to ambiguous interests.
+2025-06-21 14:35:59 [INFO] [app.py] User submitted input: i love to built idol using clay 
+2025-06-21 14:35:59 [INFO] [main_flow.py] Pipeline started with user input: i love to built idol using clay 
+2025-06-21 14:36:00 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 14:36:01 [INFO] [main_flow.py] Raw response from preference extraction: content='["sculpting", "clay art"]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 10, 'prompt_tokens': 349, 'total_tokens': 359, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-202b8874-7dc2-48b8-8711-50f9966945a7-0' usage_metadata={'input_tokens': 349, 'output_tokens': 10, 'total_tokens': 359}
+2025-06-21 14:36:01 [INFO] [main_flow.py] Extracted interests: ['["sculpting"', '"clay art"]']
+2025-06-21 14:36:01 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['["sculpting"', '"clay art"]']
+2025-06-21 14:36:01 [INFO] [fallback_handling.py] Valid interests found — fallback not needed.
+2025-06-21 14:36:07 [INFO] [main_flow.py] Mapped career fields: ['Fine Arts']
+2025-06-21 14:36:07 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 14:36:07 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 14:36:08 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 14:36:08 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 14:36:08 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 14:36:08 [INFO] [main_flow.py] Generating explanation for: {'interest': '["sculpting", "clay art"]', 'career': 'Fine Arts'}
+2025-06-21 14:36:11 [INFO] [main_flow.py] Generated explanation: A career in Fine Arts is ideal for someone interested in sculpting and clay art, as it allows for the exploration of creativity through three-dimensional forms and materials. This field provides opportunities to develop technical skills, experiment with various sculpting techniques, and participate in exhibitions, ultimately enabling the artist to express their unique vision while connecting with broader artistic communities.
+2025-06-21 14:36:11 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-21 20:12:37 [INFO] [app.py] User submitted input: i love to built
+2025-06-21 20:12:37 [INFO] [main_flow.py] Pipeline started with user input: i love to built
+2025-06-21 20:12:37 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 20:12:39 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 346, 'total_tokens': 347, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-bad67939-76dd-4acd-b9e3-73c27fd9a2d7-0' usage_metadata={'input_tokens': 346, 'output_tokens': 1, 'total_tokens': 347}
+2025-06-21 20:12:39 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 20:12:39 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 20:12:39 [WARNING] [fallback_handling.py] Fallback triggered due to no valid interests.
+2025-06-21 20:12:39 [INFO] [fallback_handling.py] Creating fallback prompt and LLM chain using | pipe...
+2025-06-21 20:12:39 [INFO] [fallback_handling.py] Prompt | LLM chain created successfully.
+2025-06-21 20:12:41 [INFO] [fallback_handling.py] Generated fallback question: Could you clarify what you love to build? Are you referring to physical structures, software, or something else?
+2025-06-21 20:12:41 [WARNING] [main_flow.py] Fallback triggered due to ambiguous interests.

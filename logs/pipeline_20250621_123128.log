@@ -1,0 +1,17 @@
+2025-06-21 12:31:28 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-21 12:31:36 [INFO] [main_flow.py] Pipeline started with user input: i
+2025-06-21 12:31:37 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:31:38 [INFO] [main_flow.py] Raw response from preference extraction: content='Interests:' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 3, 'prompt_tokens': 285, 'total_tokens': 288, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-884a57d1-544a-44b8-a2b9-071e50d18a0c-0' usage_metadata={'input_tokens': 285, 'output_tokens': 3, 'total_tokens': 288}
+2025-06-21 12:31:38 [INFO] [main_flow.py] Extracted interests: ['Interests:']
+2025-06-21 12:31:38 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['Interests:']
+2025-06-21 12:31:38 [INFO] [fallback_handling.py] Valid interests found — fallback not needed.
+2025-06-21 12:31:40 [INFO] [main_flow.py] Mapped career fields: ['Entrepreneurship']
+2025-06-21 12:31:40 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 12:31:40 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 12:31:41 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 12:31:41 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 12:31:41 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 12:31:41 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests:', 'career': 'Entrepreneurship'}
+2025-06-21 12:31:42 [INFO] [main_flow.py] Generated explanation: A career in Entrepreneurship is suitable for someone interested in exploring innovative ideas and creating unique solutions. This path allows individuals to harness their creativity and passion, enabling them to turn their interests into viable businesses that can make a meaningful impact in their chosen field.
+2025-06-21 12:31:42 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-21 12:31:42 [INFO] [main_flow.py] CLI execution completed successfully.

@@ -3,62 +3,83 @@
 ## Objective:
 This project leverages Large Language Models (LLMs) to analyze a user’s interests and recommend relevant career paths with intelligent, personalized explanations. It combines prompt engineering, fuzzy semantic matching, and fallback clarification to handle ambiguity and guide users towards fulfilling career decisions through AI-driven insights.
 
+---
 
-## Tech Stack:
-- LLMs & API(`GPT-4o-mini`)
-- LLM Framework	(`LangChain`)
-- Environment	(`Python 3.10+`, `Conda`, `.env` for secrets)
-- Logging	(Custom `get_logger` class (in `logger_config/logger.py`))
+## Live Demo
 
-## Features:
+[Try the Live App on Streamlit Cloud](https://careerrecommendationsystem1.streamlit.app/) 
 
-- **Interest Extraction via LLMs:**
+---
 
-    - Uses few-shot prompting with GPT-4o Mini to extract generalized interests from free-form user input.
-    - Automatically normalizes niche activities into broader terms
-    (e.g., "`sketching portraits`" → "`drawing`").
 
-- **Interest-to-Career Mapping via LLMs:**
-    - Maps each extracted interest to a relevant career domain using LLM-driven logic and predefined mapping.
-    - Utilizes a carefully crafted prompt template with examples and rules (e.g., duplication, synonym resolution, fallback to "`Uncertain`").
-    - Supports one-to-one or one-to-many mappings with natural language understanding rather than keyword-only rules.
+## Tech Stack
 
-- **Career Explanation Generation:**
+| Component                | Technology Used                     |
+|--------------------------|-------------------------------------|
+| LLM Backend              | OpenAI GPT-4o-mini                  |
+| LLM Framework            | LangChain                           |
+| Backend Language         | Python 3.10+                        |
+| Environment Management   | Conda / venv + `.env` for secrets   |
+| Logging                  | Custom logger via `logger_config`   |
+| Frontend UI              | Streamlit                           |
 
-    - Dynamically generates individual career explanations for each matched interest using LLM.
-    - Descriptions are contextual and personalized, avoiding repetition or overlap between different career paths.
-    - E.g., a "drawing" explanation will focus solely on art-related fields without referencing "math" or other unrelated areas.
+---
 
-- **Fallback Questioning for Uncertainty:**
+## Approach
 
-    - For ambiguous, unclear, or very short inputs, a clarification question is generated using GPT.
-    - This fallback mechanism ensures meaningful user input before initiating the mapping process.
-    - Enhances recommendation accuracy and reduces LLM misfires.
+### 1. **Interest Extraction with GPT-4o**
+- Extracts clean, generalized interests from unstructured user input.
+- Uses few-shot learning with carefully crafted prompts.
+- Normalizes similar expressions (e.g., “painting, sketching” → “drawing”).
 
+### 2. **Interest-to-Career Mapping**
+- Maps user interests to specific career domains using FAISS similarity + GPT prompting.
+- Handles synonyms, ambiguity, and missing cases using LLM flexibility.
+- Returns `"Uncertain"` when no confident match is found.
+
+### 3. **Fallback Clarification for Ambiguity**
+- If interests can't be determined or input is vague (e.g., "I’m good at things"), the system generates a clarifying follow-up question using GPT.
+- Prevents poor mappings due to unclear user input.
+
+### 4. **Career Explanation Generation**
+- For each matched career path, GPT generates a customized explanation specific to the user’s interests.
+- Eliminates repetition and aligns content to that interest (e.g., drawing → “graphic design” without discussing unrelated fields).
+
+### 5. **Streamlit-Based Interactive UI**
+- Users enter their interests into a text box with a sleek, dark-themed UI.
+- Recommendations appear as modern, bordered cards with personalized feedback.
+- Includes fallback messaging directly in the UI if needed.
+- Background image and theme enhance user experience.
+
+---
 ## Codebase Structure 
 
 ```
-brainwonders_assignment/
-├── extract_preferences.py     # Extract structured interests using GPT
-├── map_to_career.py           # Interest-to-career mapping (LLM + FAISS)
-├── explain_recommendation.py  # Career explanation generator (per interest)
-├── fallback_handling.py       # GPT fallback questions for ambiguous input
-├── main_flow.py               # Main execution pipeline
-├── logger_config/logger.py    # Contains get_logger class
-├── requirements.txt           # Python dependencies
-├── .env                       # API keys and secrets
+career_recommendation_system/
+├── app.py                          # Streamlit front-end UI
+├── main_flow.py                    # Main pipeline execution logic
+├── extract_preferences.py          # Interest extraction using GPT
+├── map_to_career.py                # Maps interests to career domains
+├── explain_recommendation.py       # Career explanation generator
+├── fallback_handling.py            # Fallback questions via GPT
+├── logger_config/
+│ └── logger.py                     # Custom logging utility
+├── requirements.txt                # Project dependencies
+├── .env                            # API key and secrets
+└── README.md                       # Project documentation
 
 
 
 ```
 
+---
 
 ## Setup Instructions:
 
 ###  Step 1: Clone the Repository
 ```
-git clone  https://github.com/Jeet2103/career_recommendation_system.git
-cd career_recommendation_system
+git clone  https://github.com/Jeet2103/Brainwonders_assignment.git
+cd Brainwonders_assignment
 
 ```
 
@@ -106,13 +127,30 @@ Describe your interests: I love sketching, playing cricket and solving math puzz
 
 - The system will:
 
-    - Extract structured interests.
+    - Extract interests
 
-    - Fallback Message system.
+    - Trigger fallback questions if input is unclear
 
-    - Map them to suitable career paths.
+    - Map interests to careers
 
-    - Provide individual explanations per career.
+    - Generate personalized explanations
+
+### Step 6: Run the Streamlit App (Recommended)
+To launch the interactive UI:
+```
+streamlit run app.py
+
+```
+
+- This will open a browser where you can:
+
+    - Enter your interests in natural language
+
+    - View personalized career recommendations with detailed insights
+
+    - Get follow-up questions if input is unclear
+
+---
 
 Maintained by **Jeet Nandigrami**  
 - GitHub: [Jeet2103](https://github.com/Jeet2103)  

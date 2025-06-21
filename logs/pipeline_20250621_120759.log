@@ -1,0 +1,16 @@
+2025-06-21 12:15:11 [INFO] [app.py] User submitted input: i
+2025-06-21 12:15:11 [INFO] [main_flow.py] Pipeline started with user input: i
+2025-06-21 12:15:11 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:15:12 [INFO] [main_flow.py] Raw response from preference extraction: content='Interests:' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 3, 'prompt_tokens': 288, 'total_tokens': 291, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-a35ac7c4-76a9-4a8b-abcc-683d3273545e-0' usage_metadata={'input_tokens': 288, 'output_tokens': 3, 'total_tokens': 291}
+2025-06-21 12:15:12 [INFO] [main_flow.py] Extracted interests: ['Interests:']
+2025-06-21 12:15:12 [INFO] [fallback_handling.py] Checking for fallback condition with interests: ['Interests:']
+2025-06-21 12:15:12 [INFO] [fallback_handling.py] Fallback not required. Interest mapping seems valid.
+2025-06-21 12:15:16 [INFO] [main_flow.py] Mapped career fields: ['Entrepreneurship']
+2025-06-21 12:15:16 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 12:15:16 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 12:15:17 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 12:15:17 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 12:15:17 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 12:15:17 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests:', 'career': 'Entrepreneurship'}
+2025-06-21 12:15:18 [INFO] [main_flow.py] Generated explanation: A career in Entrepreneurship is suitable for someone interested in pursuing innovative ideas and solving problems, as it allows for creativity and autonomy in developing unique solutions. Entrepreneurs have the opportunity to turn their passions into viable businesses, driving change and making a tangible impact in their chosen field.
+2025-06-21 12:15:18 [INFO] [main_flow.py] Pipeline completed successfully.

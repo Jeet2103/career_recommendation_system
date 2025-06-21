@@ -1,0 +1,7 @@
+2025-06-21 12:19:16 [INFO] [extract_preferences.py] Running main execution block...
+2025-06-21 12:19:16 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-21 12:19:16 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-21 12:19:16 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-21 12:19:16 [INFO] [extract_preferences.py] LLMChain created successfully.
+2025-06-21 12:19:16 [INFO] [extract_preferences.py] User input received: I am 
+2025-06-21 12:19:17 [INFO] [extract_preferences.py] LLM Response: content='Interests: ' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 4, 'prompt_tokens': 289, 'total_tokens': 293, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-f8f61081-7e58-4ade-98a8-6e4ad5ce5148-0' usage_metadata={'input_tokens': 289, 'output_tokens': 4, 'total_tokens': 293}

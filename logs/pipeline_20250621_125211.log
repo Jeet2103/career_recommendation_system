@@ -1,0 +1,19 @@
+2025-06-21 12:52:11 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 12:52:34 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 12:55:07 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 12:55:29 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 12:59:37 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 12:59:59 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 13:02:02 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 13:02:24 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 14:36:01 [INFO] [map_to_career.py] Mapping user interests: ['["sculpting"', '"clay art"]']
+2025-06-21 14:36:03 [INFO] [map_to_career.py] Interest '["sculpting"' lemmatized to '["sculpting"'
+2025-06-21 14:36:04 [INFO] [map_to_career.py] Best FAISS match for '["sculpting"': sketching -> Fine Arts
+2025-06-21 14:36:04 [INFO] [map_to_career.py] Requesting synonyms from GPT for: ["sculpting"
+2025-06-21 14:36:05 [WARNING] [map_to_career.py] GPT response was not a valid list: python
+["carving", "shaping", "modeling", "crafting", "forming"]
+
+2025-06-21 14:36:05 [INFO] [map_to_career.py] Interest '"clay art"]' lemmatized to '"clay art"]'
+2025-06-21 14:36:06 [INFO] [map_to_career.py] Best FAISS match for '"clay art"]': art -> Fine Arts
+2025-06-21 14:36:06 [INFO] [map_to_career.py] Requesting synonyms from GPT for: "clay art"]
+2025-06-21 14:36:07 [INFO] [map_to_career.py] Final mapped careers: ['Fine Arts']

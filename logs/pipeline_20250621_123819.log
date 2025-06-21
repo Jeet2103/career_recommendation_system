@@ -1,0 +1,17 @@
+2025-06-21 12:38:19 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-21 12:38:24 [INFO] [main_flow.py] Pipeline started with user input: i am
+2025-06-21 12:38:25 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:38:26 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 344, 'total_tokens': 345, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-a14943ab-36a5-46ef-a6ad-173868b1901d-0' usage_metadata={'input_tokens': 344, 'output_tokens': 1, 'total_tokens': 345}
+2025-06-21 12:38:26 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 12:38:26 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 12:38:26 [INFO] [fallback_handling.py] Valid interests found — fallback not needed.
+2025-06-21 12:38:28 [INFO] [main_flow.py] Mapped career fields: ['Software Engineering']
+2025-06-21 12:38:28 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 12:38:28 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 12:38:28 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 12:38:28 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 12:38:28 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 12:38:28 [INFO] [main_flow.py] Generating explanation for: {'interest': '[]', 'career': 'Software Engineering'}
+2025-06-21 12:38:30 [INFO] [main_flow.py] Generated explanation: It seems that you have not specified the interest in question. Please provide the specific interest for a tailored response regarding why a career in Software Engineering would be suitable for that interest.
+2025-06-21 12:38:30 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-21 12:38:30 [INFO] [main_flow.py] CLI execution completed successfully.

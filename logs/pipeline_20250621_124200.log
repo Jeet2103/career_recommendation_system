@@ -1,0 +1,4 @@
+2025-06-21 12:42:46 [INFO] [extract_preferences.py] Initializing preference extraction chain...
+2025-06-21 12:42:46 [INFO] [extract_preferences.py] Prompt template created successfully.
+2025-06-21 12:42:46 [INFO] [extract_preferences.py] LLM initialized with gpt-4o-mini.
+2025-06-21 12:42:46 [INFO] [extract_preferences.py] LLMChain created successfully.

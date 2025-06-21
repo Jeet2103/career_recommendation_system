@@ -1,0 +1,17 @@
+2025-06-21 12:24:53 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-21 12:25:06 [INFO] [main_flow.py] Pipeline started with user input: i am
+2025-06-21 12:25:06 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:25:07 [INFO] [main_flow.py] Raw response from preference extraction: content='Interests:' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 3, 'prompt_tokens': 289, 'total_tokens': 292, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-a9828951-19be-428d-a5d1-c66593fac574-0' usage_metadata={'input_tokens': 289, 'output_tokens': 3, 'total_tokens': 292}
+2025-06-21 12:25:07 [INFO] [main_flow.py] Extracted interests: ['Interests:']
+2025-06-21 12:25:07 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['Interests:']
+2025-06-21 12:25:07 [INFO] [fallback_handling.py] Valid interests found — fallback not needed.
+2025-06-21 12:25:10 [INFO] [main_flow.py] Mapped career fields: ['Entrepreneurship']
+2025-06-21 12:25:10 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 12:25:10 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 12:25:10 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 12:25:10 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 12:25:10 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 12:25:10 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests:', 'career': 'Entrepreneurship'}
+2025-06-21 12:25:12 [INFO] [main_flow.py] Generated explanation: A career in Entrepreneurship is suitable for someone interested in creating innovative solutions and driving change, as it allows for the exploration of unique ideas and the opportunity to build something from the ground up. This path fosters creativity, problem-solving, and the ability to make a tangible impact in the market, aligning perfectly with a passion for innovation and self-direction.
+2025-06-21 12:25:12 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-21 12:25:12 [INFO] [main_flow.py] CLI execution completed successfully.

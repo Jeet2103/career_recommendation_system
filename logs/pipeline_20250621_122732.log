@@ -1,0 +1,17 @@
+2025-06-21 12:27:32 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-21 12:28:05 [INFO] [main_flow.py] Pipeline started with user input: i love playing
+2025-06-21 12:28:05 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:28:06 [INFO] [main_flow.py] Raw response from preference extraction: content='Interests: gaming' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 4, 'prompt_tokens': 290, 'total_tokens': 294, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-c6f8517b-185a-4cb8-aafa-e75a1d234aa1-0' usage_metadata={'input_tokens': 290, 'output_tokens': 4, 'total_tokens': 294}
+2025-06-21 12:28:06 [INFO] [main_flow.py] Extracted interests: ['Interests: gaming']
+2025-06-21 12:28:06 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['Interests: gaming']
+2025-06-21 12:28:06 [INFO] [fallback_handling.py] Valid interests found — fallback not needed.
+2025-06-21 12:28:08 [INFO] [main_flow.py] Mapped career fields: ['Athletics']
+2025-06-21 12:28:08 [INFO] [explain_recommendation.py] Initializing PromptTemplate for career explanation...
+2025-06-21 12:28:08 [INFO] [explain_recommendation.py] PromptTemplate created successfully.
+2025-06-21 12:28:09 [INFO] [explain_recommendation.py] ChatOpenAI LLM initialized with model gpt-4o-mini.
+2025-06-21 12:28:09 [INFO] [explain_recommendation.py] Prompt successfully chained with LLM.
+2025-06-21 12:28:09 [INFO] [main_flow.py] Explanation chain initialized.
+2025-06-21 12:28:09 [INFO] [main_flow.py] Generating explanation for: {'interest': 'Interests: gaming', 'career': 'Athletics'}
+2025-06-21 12:28:10 [INFO] [main_flow.py] Generated explanation: A career in Athletics can be suitable for someone interested in gaming due to the growing intersection between esports and traditional sports, where competitive gaming requires the same dedication, discipline, and strategic thinking as physical athleticism. Additionally, many athletes are increasingly involved in gaming communities, allowing for a unique blend of physical prowess and digital engagement.
+2025-06-21 12:28:10 [INFO] [main_flow.py] Pipeline completed successfully.
+2025-06-21 12:28:10 [INFO] [main_flow.py] CLI execution completed successfully.

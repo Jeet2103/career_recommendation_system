@@ -1,0 +1,7 @@
+2025-06-21 12:24:22 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 12:24:53 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 12:25:07 [INFO] [map_to_career.py] Mapping user interests: ['Interests:']
+2025-06-21 12:25:08 [INFO] [map_to_career.py] Interest 'Interests:' lemmatized to 'interests:'
+2025-06-21 12:25:09 [INFO] [map_to_career.py] Best FAISS match for 'interests:': business -> Entrepreneurship
+2025-06-21 12:25:09 [INFO] [map_to_career.py] Requesting synonyms from GPT for: interests:
+2025-06-21 12:25:10 [INFO] [map_to_career.py] Final mapped careers: ['Entrepreneurship']

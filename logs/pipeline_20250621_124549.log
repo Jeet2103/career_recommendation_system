@@ -1,0 +1,14 @@
+2025-06-21 12:45:49 [INFO] [main_flow.py] Starting CLI execution of career recommendation pipeline.
+2025-06-21 12:49:19 [INFO] [main_flow.py] Pipeline started with user input: i am
+2025-06-21 12:49:19 [INFO] [main_flow.py] Preference extraction chain initialized.
+2025-06-21 12:49:20 [INFO] [main_flow.py] Raw response from preference extraction: content='[]' additional_kwargs={'refusal': None} response_metadata={'token_usage': {'completion_tokens': 1, 'prompt_tokens': 344, 'total_tokens': 345, 'completion_tokens_details': {'audio_tokens': 0, 'reasoning_tokens': 0, 'accepted_prediction_tokens': 0, 'rejected_prediction_tokens': 0}, 'prompt_tokens_details': {'audio_tokens': 0, 'cached_tokens': 0}}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_34a54ae93c', 'finish_reason': 'stop', 'logprobs': None} id='run-88b90cc7-ec8c-4e7d-bb57-860231870a46-0' usage_metadata={'input_tokens': 344, 'output_tokens': 1, 'total_tokens': 345}
+2025-06-21 12:49:20 [INFO] [main_flow.py] Extracted interests: ['[]']
+2025-06-21 12:49:20 [INFO] [fallback_handling.py] Checking fallback condition... Extracted interests: ['[]']
+2025-06-21 12:49:20 [WARNING] [fallback_handling.py] Interests list contains string '[]' — triggering fallback.
+2025-06-21 12:49:20 [INFO] [fallback_handling.py] Creating fallback prompt template...
+2025-06-21 12:49:20 [INFO] [fallback_handling.py] PromptTemplate for fallback question created successfully.
+2025-06-21 12:49:21 [INFO] [fallback_handling.py] ChatOpenAI LLM initialized for fallback chain.
+2025-06-21 12:49:21 [INFO] [fallback_handling.py] Fallback LLMChain created successfully.
+2025-06-21 12:49:22 [INFO] [fallback_handling.py] Generated fallback question: Could you please clarify what you mean by "I am"? Are you looking to share something about yourself or ask a specific question?
+2025-06-21 12:49:22 [WARNING] [main_flow.py] Fallback triggered due to ambiguous interests.
+2025-06-21 12:49:22 [INFO] [main_flow.py] CLI execution completed successfully.

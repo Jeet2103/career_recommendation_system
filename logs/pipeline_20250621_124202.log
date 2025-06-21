@@ -1,0 +1,7 @@
+2025-06-21 12:42:02 [INFO] [map_to_career.py] Preparing FAISS index...
+2025-06-21 12:42:25 [INFO] [map_to_career.py] FAISS index built successfully.
+2025-06-21 12:42:47 [INFO] [map_to_career.py] Mapping user interests: ['[]']
+2025-06-21 12:42:48 [INFO] [map_to_career.py] Interest '[]' lemmatized to '[]'
+2025-06-21 12:42:48 [INFO] [map_to_career.py] Best FAISS match for '[]': programming -> Software Engineering
+2025-06-21 12:42:48 [INFO] [map_to_career.py] Requesting synonyms from GPT for: []
+2025-06-21 12:42:49 [INFO] [map_to_career.py] Final mapped careers: ['Software Engineering']
